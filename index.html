@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>T2V 正反例对照</title>
+<style>
+  :root { color-scheme: light; --ink:#18212f; --muted:#627085; --line:#dbe2ea; --paper:#fff; --bg:#f4f6f8; --bad:#b42318; --good:#067647; }
+  * { box-sizing:border-box; } body { margin:0; background:var(--bg); color:var(--ink); font:15px/1.55 system-ui,-apple-system,"PingFang SC","Microsoft YaHei",sans-serif; }
+  main { max-width:1400px; margin:auto; padding:32px 22px 56px; } h1,h2,h3,p { margin-top:0; } h1 { font-size:clamp(28px,5vw,46px); letter-spacing:-.04em; margin-bottom:6px; }
+  .intro,.metadata { color:var(--muted); } nav { display:flex; flex-wrap:wrap; gap:7px; margin:20px 0 2px; } nav a { color:#344054; text-decoration:none; border:1px solid var(--line); padding:5px 9px; border-radius:99px; font-size:13px; } nav a:hover { background:#eaf0f7; } .group { background:var(--paper); border:1px solid var(--line); border-radius:18px; padding:22px; margin-top:22px; box-shadow:0 2px 7px #1018280a; }
+  .group-heading { display:flex; justify-content:space-between; align-items:start; gap:16px; } .eyebrow { color:var(--muted); font-size:12px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; margin-bottom:2px; } h2 { font-size:22px; line-height:1.25; margin-bottom:0; }
+  .criterion,.failure { background:#f8fafc; border-left:3px solid #94a3b8; padding:10px 12px; margin:18px 0; white-space:pre-wrap; } .criterion strong,.failure strong { display:block; font-size:12px; color:var(--muted); letter-spacing:.04em; }
+  .cards { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; } .card { border:1px solid var(--line); border-radius:13px; overflow:hidden; background:#fff; } .card.bad { border-top:4px solid var(--bad); } .card.good { border-top:4px solid var(--good); }
+  .card header { display:flex; justify-content:space-between; align-items:start; gap:10px; padding:14px 14px 8px; } h3 { font-size:16px; margin:0; } .design-label { margin:0 0 3px; font-weight:750; font-size:12px; } .bad .design-label { color:var(--bad); } .good .design-label { color:var(--good); } .metadata { display:flex; flex-wrap:wrap; justify-content:end; gap:6px; font-size:12px; } .status { border:1px solid var(--line); border-radius:999px; padding:1px 7px; }
+  video,.missing-video { width:100%; display:block; background:#111827; aspect-ratio:16/9; object-fit:contain; } .missing-video { color:#cbd5e1; display:grid; place-items:center; } details { margin:10px 14px; border-top:1px solid var(--line); padding-top:10px; } summary { cursor:pointer; color:#334155; font-weight:600; } pre { margin:10px 0 0; white-space:pre-wrap; overflow-wrap:anywhere; color:#334155; font:13px/1.55 ui-monospace,SFMono-Regular,Menlo,monospace; }
+  .failure,.review { margin:12px 14px 14px; border-left-color:#f59e0b; } .review { background:#f0fdf4; border-left:3px solid #22c55e; padding:10px 12px; white-space:pre-wrap; } .review strong { display:block; font-size:12px; color:var(--muted); letter-spacing:.04em; } button { border:0; border-radius:9px; background:#18212f; color:#fff; padding:9px 13px; cursor:pointer; font:inherit; font-weight:650; white-space:nowrap; } button:hover { background:#344054; }
+  @media (max-width:700px) { main { padding:22px 12px 40px; } .group { padding:16px; border-radius:14px; } .cards { grid-template-columns:1fr; } .group-heading { align-items:center; } }
+</style>
+</head>
+<body><main>
+  <header><h1>T2V 正反例对照</h1><p class="intro">MiniMax-H3 · 768P · 16:9 · 每条原始 prompt 单独经过 PE，再用增强文本生成一次。</p><nav aria-label="快速导航"><a href="#group-1">1. 核心动作缺失-P0</a><a href="#group-2">2. 景别错误</a><a href="#group-3">3. 表演表情不自然</a><a href="#group-4">4. 主体全程静止</a><a href="#group-5">5. 主体数量不一致（含主体复制）-P0</a><a href="#group-6">6. 风格不一致-P0</a></nav></header>
+  
+    <section class="group" id="group-1">
+      <div class="group-heading">
+        <div><p class="eyebrow">第 1 组</p><h2>核心动作缺失-P0</h2></div>
+        <button class="sync" type="button" data-group="group-1">同步播放</button>
+      </div>
+      <p class="criterion"><strong>判定标准</strong>坏视频中男子没有推门进入，或愣住、掏手机被跳过。好视频三个动作按顺序全部出现。</p>
+      <div class="cards">
+    <article class="card bad">
+      <header><div><p class="design-label">反例设计</p></div><div class="metadata"><span class="status">已完成</span> <span>10.12 秒</span></div></header>
+      <video preload="metadata" playsinline controls src="videos/01_bad.mp4" poster="posters/01_bad.jpg"></video>
+      
+      <details>
+        <summary>原始 prompt</summary>
+        <pre>10秒写实短片，横屏16:9。客厅内，男子推门进屋、放下公文包、脱外套、挂衣架、换拖鞋、倒水、坐沙发、打开电视、发现沙发上的陌生人后愣住、掏出手机报警。以上全部动作必须在10秒内依次完成，每个动作都要出现。</pre>
+      </details>
+      
+      <details>
+        <summary>PE 后 prompt</summary>
+        <pre>integrated_multimodal_description: [Shot 1] Cinematic, medium shot at eye level with a tracking shot moving backward, capturing a modern apartment entryway with warm ceiling pot lights and polished oak flooring. A slender Asian man in his early thirties with neat parted black hair, wearing a navy wool overcoat over an unbuttoned white collared shirt and dark trousers, pushes open the heavy wood-paneled front door and steps inside. Without pausing, he sets a black leather briefcase onto a low wooden credenza by the entrance, briskly slips his arms out of the navy overcoat, and loops the collar onto a standing wooden coat rack peg. He immediately steps out of his black leather oxfords, sliding his feet directly into a pair of soft grey fabric slippers, exhaling wearily as his shoulders drop. [Shot 2] At 00:03.800, the camera cuts to a medium wide shot inside the living room lit by a warm standing floor lamp, utilizing a tracking shot following his movement from the hallway. The man strides quickly to an open sideboard, grasps a clear glass pitcher, and hurriedly pours water into a glass tumbler with a quick splash before taking a brief gulp. He steps around the coffee table and lowers himself onto a grey upholstered three-seater sofa, immediately picking up a black television remote control from the table and pointing it forward; he clicks the power button, causing the large wall-mounted flat-screen television across from him to flash alive with blue broadcast light. [Shot 3] At 00:07.200, the camera cuts to a medium close-up over the man's right shoulder, adopting a static shot framing both him and the opposite end of the couch. Seated motionless in the shadows on the far corner of the sofa is an uninvited stranger dressed in an oversized black hooded sweatshirt pulled low over their face and dark jeans. As the man turns his head slightly to rest his glass on the end table, his gaze hits the hooded figure; his entire body instantly stiffens, his eyes widen in stark terror, and his mouth hangs half-open in shock. Keeping his frightened gaze locked on the intruder, his right hand hastily plunges into his trouser pocket, frantically yanking out a black smartphone and rapidly tapping the screen to dial the emergency police number.
+overall_soundscape: A distinct metallic click and heavy creak of the wooden entrance door swinging open, followed by the dull thud of a leather briefcase placed on the credenza. The audible rustle of wool fabric and the light clatter of the coat rack peg as the coat is hung, followed by the pronounced sliding shuffle of slippers against smooth oak floorboards. A loud, clear splash and gurgle of water pouring into the glass tumbler, transitioning into the soft cushioned thud of sinking into the couch and the plastic click of a remote button. The sudden electronic chime and muffled broadcast chatter from the television, punctuated by a sharp, audible gasp of breath, fabric scraping violently against a trouser pocket, and the rapid, resonant tapping of fingertips against a smartphone screen.
+non_diegetic_music: Low sustained cello drone at a slow tempo underneath faint, clock-like percussive pulses, building into an abrupt, dissonant high-register violin bow screech that holds suspended without resolution.</pre>
+      </details>
+      
+      <p class="review"><strong>观察记录</strong>第一帧门已半开，男子正在进屋，推门起始不清楚。结尾仍能看到他发现陌生人并掏手机。另有明显的跨镜头连续性问题：上镜脱下挂起的深色外套，下镜又穿回身上。</p>
+    </article>
+    <article class="card good">
+      <header><div><p class="design-label">正例设计</p></div><div class="metadata"><span class="status">已完成</span> <span>10.12 秒</span></div></header>
+      <video preload="metadata" playsinline controls src="videos/01_good.mp4" poster="posters/01_good.jpg"></video>
+      
+      <details>
+        <summary>原始 prompt</summary>
+        <pre>10秒写实短片，横屏16:9。客厅内。0-4秒：中景，男子用右手推开木门，走进客厅。4-7秒：他看到沙发上坐着一个陌生人，愣住不动。7-10秒：他掏出手机，缓慢举到耳边。</pre>
+      </details>
+      
+      <details>
+        <summary>PE 后 prompt</summary>
+        <pre>integrated_multimodal_description: [Shot 1] Cinematic, medium shot, eye-level, tracking shot moving backward ahead of the subject. A lean East Asian man in his early thirties with neat short black hair, wearing a dark navy wool trench coat over a slate grey knit sweater and charcoal trousers, stands at an apartment entryway. A soft warm light from the hallway outside silhouettes his back, while the living room ahead sits in dim evening dusk. Using his right hand, he turns the brass door handle and pushes open a heavy dark oak wooden door. He steps across the threshold onto polished dark hardwood flooring and walks into the living room, his gaze casually forward before his pace slows down. [Shot 2] At 00:03.850, the camera cuts to an over-the-shoulder medium wide shot from behind the man's right side, static shot. In the center of the dimly lit living room, a low grey fabric sofa faces away from a television wall, where an unfamiliar figure wearing an oversized dark charcoal hooded sweatshirt sits completely motionless, facing toward the far wall. The background window is covered by horizontal Venetian blinds that filter thin slats of cool bluish twilight across the room. In the left foreground, the man from Shot 1 abruptly freezes mid-stride, his shoulders stiffening as his posture locks in place upon noticing the stranger. [Shot 3] At 00:06.900, the camera cuts to a medium close-up of the man from Shot 1, with a slow push in on his face. Backlit subtly by the ambient hallway glow behind him, his expression turns tense with widened eyes and a clenched jaw, his gaze locked unblinkingly toward the sofa off-screen. Keeping his body rigid and eyes fixed forward, he slips his right hand into the pocket of his navy coat, pulls out a slim black smartphone, and slowly lifts the phone up to his right ear, his breathing visibly shallow.
+overall_soundscape: A distinct mechanical click of a brass latch precedes the low wooden creak of the door opening, followed by audible, measured shoe steps on polished hardwood. The footsteps abruptly cease with a faint fabric rustle of wool coat folds, transitioning into a pronounced quiet punctuated only by a low, humming room tone. Distinct rustling is heard as his hand enters his coat pocket, followed by the crisp, audible handling sound of a smartphone sliding out and slowly lifting toward his ear.
+non_diegetic_music: Sustained low sub-bass drone accompanied by a single, sparse acoustic piano note with long decay, slow tempo, maintaining a steady, minimalist tension without percussion.</pre>
+      </details>
+      
+      <p class="review"><strong>观察记录</strong>开头能看到从关门到开门进屋的过程，约 4–7 秒男子面对沙发上的陌生人停住，结尾把手机举到耳边。三个核心动作可辨。</p>
+    </article></div>
+    </section>
+
+    <section class="group" id="group-2">
+      <div class="group-heading">
+        <div><p class="eyebrow">第 2 组</p><h2>景别错误</h2></div>
+        <button class="sync" type="button" data-group="group-2">同步播放</button>
+      </div>
+      <p class="criterion"><strong>判定标准</strong>题面要求镜头1是特写。坏视频里镜头1是全景或中景，人物只占画面一小部分。好视频是脸部特写。</p>
+      <div class="cards">
+    <article class="card bad">
+      <header><div><p class="design-label">反例设计</p></div><div class="metadata"><span class="status">已完成</span> <span>8 秒</span></div></header>
+      <video preload="metadata" playsinline controls src="videos/02_bad.mp4" poster="posters/02_bad.jpg"></video>
+      
+      <details>
+        <summary>原始 prompt</summary>
+        <pre>8秒写实短片，横屏16:9。镜头1：特写，女子的脸占满画面。同时要完整展示她身后整条商业街、十几个路人和远处的钟楼。</pre>
+      </details>
+      
+      <details>
+        <summary>PE 后 prompt</summary>
+        <pre>integrated_multimodal_description: [Shot 1] Cinematic, deep-focus close-up framing utilizing an ultra-wide angle lens, the camera holds a static shot. In the immediate foreground, the face of an East Asian woman in her late twenties dominates and virtually fills the vertical frame, positioned slightly off-center. She possesses shoulder-length dark brown hair parted slightly, subtle natural makeup, and alert dark brown eyes, wearing a crisp camel-beige wool trench coat with a high collar visible at the lower frame edge. Through deep depth of field, the entire outdoor commercial pedestrian street behind her remains sharply visible, stretching into a linear perspective. Wet gray granite cobblestones reflect overcast sky light, flanked by three-story red-brick commercial facades with dark green canvas awnings and glowing acrylic storefront signs. In the midground, roughly a dozen diverse pedestrians in long winter coats and knitted scarves walk along the avenue, some carrying paper shopping bags. At the far vanishing point of the street, a tall historic stone clock tower stands erect against the pale sky, its circular Roman-numeral clock face fully distinguishable. Soft, diffuse ambient daylight sculpts her facial features without harsh shadows, complemented by warm incandescent streetlamps beginning to glow along the sidewalk. The woman blinks twice, her gaze subtly shifting across the horizon before re-centering, her shoulders resting motionless as pedestrians pass continuously through the street behind her.
+overall_soundscape: A distinct low rumble of distant urban street traffic hums as audible footsteps clatter rhythmically against wet stone pavers, followed by the soft murmur of passing crowd voices, while a pronounced, resonant bell chime from the clock tower reverberates faintly through the open air.
+non_diegetic_music: Minimalist solo piano with sparse, slow-tempo chord voicings over a sustained low electronic synth pad, maintaining a flat dynamic without swell.</pre>
+      </details>
+      
+      <p class="review"><strong>观察记录</strong>整条商业街、行人和钟楼清晰可见，女子的脸只占画面下部的一小块。PE 写了深景深超广角特写，成片明显偏离原题的“脸占满画面”。</p>
+    </article>
+    <article class="card good">
+      <header><div><p class="design-label">正例设计</p></div><div class="metadata"><span class="status">已完成</span> <span>8 秒</span></div></header>
+      <video preload="metadata" playsinline controls src="videos/02_good.mp4" poster="posters/02_good.jpg"></video>
+      
+      <details>
+        <summary>原始 prompt</summary>
+        <pre>8秒写实短片，横屏16:9。镜头1：特写，女子的脸占满画面，背景是虚化的街道光斑，看不清路人和建筑。</pre>
+      </details>
+      
+      <details>
+        <summary>PE 后 prompt</summary>
+        <pre>integrated_multimodal_description: [Shot 1] Cinematic, a close-up framing with the camera executing a push in at slow speed. The face of an East Asian woman in her late twenties fills the frame, positioned centrally. She has fair skin, fine shoulder-length dark brown hair with stray strands gently lifting across her temple in a subtle breeze, subtly defined cheekbones, and moist, expressive dark brown eyes. The turned-up collar of a thick camel wool coat is barely visible at the bottom border of the composition. The entire background dissolves into an intense, shallow-depth-of-field blur with luminous, circular bokeh discs of amber, cool cyan, and soft ruby red streetlights, rendering all pedestrians and building silhouettes completely unrecognizable. Soft, warm diffused key light from an off-screen storefront illuminates her right cheek and the bridge of her nose, while a faint cool edge light outlines the curve of her jaw and hair, casting crisp catchlights into her pupils. She initially gazes pensively slightly off to the left of the frame; she then blinks slowly as her chest rises with a quiet intake of breath, her lips subtly parting as her gaze drifts toward the camera lens.
+overall_soundscape: A muffled low-frequency city drone with distant traffic rumble on damp asphalt is audible in the background, layered with a faint, distinct whisper of cold night breeze. Her quiet, measured exhalation is clearly heard in the immediate foreground, followed by an imperceptible micro-rustle of thick wool fabric as her shoulders slightly shift.
+non_diegetic_music: Sparse solo acoustic piano notes played at a slow tempo, accompanied by sustained, low-register cello pads that remain flat and steady with no swell.</pre>
+      </details>
+      
+      <p class="review"><strong>观察记录</strong>脸部始终占据画面主体，街景虚化成光斑。对比反例，脸在画面内的大小和背景的可辨程度都有明显差异。</p>
+    </article></div>
+    </section>
+
+    <section class="group" id="group-3">
+      <div class="group-heading">
+        <div><p class="eyebrow">第 3 组</p><h2>表演表情不自然</h2></div>
+        <button class="sync" type="button" data-group="group-3">同步播放</button>
+      </div>
+      <p class="criterion"><strong>判定标准</strong>坏视频中表情切换生硬、面部肌肉僵硬或抽动。好视频表情过渡自然。</p>
+      <div class="cards">
+    <article class="card bad">
+      <header><div><p class="design-label">反例设计</p></div><div class="metadata"><span class="status">已完成</span> <span>4.46 秒</span></div></header>
+      <video preload="metadata" playsinline controls src="videos/03_bad.mp4" poster="posters/03_bad.jpg"></video>
+      
+      <details>
+        <summary>原始 prompt</summary>
+        <pre>4秒写实短片，横屏16:9。近景，女子正对镜头。0.5秒内从惊恐变为大笑，再变为痛哭，再变为冷笑，每种表情都要夸张到位，不要过渡。</pre>
+      </details>
+      
+      <details>
+        <summary>PE 后 prompt</summary>
+        <pre>integrated_multimodal_description: [Shot 1] Cinematic, close-up shot, static shot framing a woman in her late twenties centered against a dark, minimalist concrete wall with subtle vertical texture. She has sharp facial contours, pale skin, and unkempt shoulder-length jet-black hair falling loosely around her collarbones, wearing a dark charcoal fine-knit wool crewneck sweater. A harsh cool-white key light strikes from camera-right, casting deep chiaroscuro shadows across her left cheek, while a faint blue rim light carves her silhouette from the murky background. She begins staring directly into the lens with her eyes bulging wide in raw, unblinking horror, her pupils dilated, lower jaw shivering visibly as her breath catches in her throat. Without any gradual transition, her face abruptly snaps into an explosive, manic grin—her mouth stretching unnaturally wide to reveal clenched teeth, cheeks bunching up, eyes crinkling in erratic, exaggerated hilarity as her neck tendons strain. After a beat, her expression instantly collapses with mechanical sharpness into intense, agonizing grief; her eyebrows plunge into a trembling, pinched ridge, her mouth contorting downward into a quivering, weeping square as glistening moisture wells at the corners of her reddened lower eyelids. In another immediate, instantaneous switch devoid of smoothing, her features violently flatten into an icy cold sneer, one corner of her upper lip curling upward into a contemptuous, mocking smirk while her eyelids lower slightly into a piercing, deadpan glare that locks firmly with the lens.
+overall_soundscape: A sharp, audible intake of breath through trembling lips is clearly heard, abruptly replaced by a distinct, sharp burst of hysterical laughter, followed the moment after by a pronounced choked sob and ragged sniffling intake of air, which transitions instantly into a dry, audible nasal scoff in the dead-quiet room ambience.
+non_diegetic_music: A low, bowed cello drone with slow, sustained microtonal pitch bends at an even tempo, maintaining a steady, minimalist dynamic shape.</pre>
+      </details>
+      
+      <p class="review"><strong>观察记录</strong>开头瞪眼，约 1 秒开始咧嘴，随后逐渐皱眉、收紧嘴角。表演明显更夸张，但原题要求的半秒内四次急变没有清楚出现。PE 也没有保留明确的半秒时限。</p>
+    </article>
+    <article class="card good">
+      <header><div><p class="design-label">正例设计</p></div><div class="metadata"><span class="status">已完成</span> <span>6.58 秒</span></div></header>
+      <video preload="metadata" playsinline controls src="videos/03_good.mp4" poster="posters/03_good.jpg"></video>
+      
+      <details>
+        <summary>原始 prompt</summary>
+        <pre>6秒写实短片，横屏16:9。近景，女子正对镜头。她先是神情平静，随后嘴角慢慢上扬，最后露出自然的浅笑，整个变化平缓连贯。</pre>
+      </details>
+      
+      <details>
+        <summary>PE 后 prompt</summary>
+        <pre>integrated_multimodal_description: [Shot 1] Cinematic, close-up framing at eye level, the camera holds a static shot centered directly on a woman in her late twenties. She has smooth fair skin, soft almond-shaped hazel eyes, and dark brown hair loosely gathered at the nape of her neck with subtle strands framing her temples, wearing an oat-colored ribbed knit sweater. She sits dead center in the frame, facing the lens squarely against a shallow-depth-of-field indoor background featuring an off-white plaster wall and the soft blurred silhouette of a potted ficus. Diffused, soft daylight pours from an unseen window on camera left, creating distinct catchlights in her pupils and a gentle, natural gradient along her right cheekbone. Initially, her expression remains tranquil, neutral, and still, her gaze fixed directly forward. Her chest rises gently with an even breath, followed by a single slow, unhurried blink. Gradually, the corners of her mouth begin to curl upward in a smooth, continuous progression, subtle creases deepening slightly around her cheeks. Her eyes soften with warmth, and her lips part just a fraction to reveal a quiet, authentic faint smile, which she holds steadily while continuing to gaze into the lens.
+overall_soundscape: A gentle room tone hums softly throughout, accompanied by an audible, soft exhalation distinct in the foreground. A faint rustle of ribbed fabric is clearly heard as her shoulders settle, followed by a muted, delicate ambient silence.
+non_diegetic_music: Solo acoustic piano, slow tempo, featuring sparse, delicate high-register notes decaying over a sustained low-register drone, with an even dynamic and no swell.</pre>
+      </details>
+      
+      <p class="review"><strong>观察记录</strong>人物从平静逐渐变为浅笑，约 4–6 秒嘴角上扬，表情变化连续。</p>
+    </article></div>
+    </section>
+
+    <section class="group" id="group-4">
+      <div class="group-heading">
+        <div><p class="eyebrow">第 4 组</p><h2>主体全程静止</h2></div>
+        <button class="sync" type="button" data-group="group-4">同步播放</button>
+      </div>
+      <p class="criterion"><strong>判定标准</strong>坏视频中人物全程没有动作，只有镜头在动。好视频中人物有连续动作。</p>
+      <div class="cards">
+    <article class="card bad">
+      <header><div><p class="design-label">反例设计</p></div><div class="metadata"><span class="status">已完成</span> <span>8 秒</span></div></header>
+      <video preload="metadata" playsinline controls src="videos/04_bad.mp4" poster="posters/04_bad.jpg"></video>
+      
+      <details>
+        <summary>原始 prompt</summary>
+        <pre>8秒写实短片，横屏16:9。傍晚的海边，一名穿白裙的女子像雕塑一样站立，姿势固定，身体和头发都不动，只有镜头缓慢拉远。</pre>
+      </details>
+      
+      <details>
+        <summary>PE 后 prompt</summary>
+        <pre>integrated_multimodal_description: [Shot 1] Cinematic, opening on an eye-level medium full shot centered on a young East Asian woman in her early twenties, who stands entirely rigid and motionless like a marble sculpture on a damp shoreline at late dusk. She has pale, porcelain skin, refined and immobile facial features, and jet-black hair gathered into an impeccably smooth, lacquered low chignon without a single loose strand. She wears a floor-length white linen dress with neat Grecian pleats and structured draping that falls vertically to the wet ground, showing no flutter or ripple. She stands barefoot on the compacted dark sand, which reflects the faint violet and slate-blue hues of the twilight sky. Behind her, the calm ocean recedes toward the distant horizon under a cool, diffused evening light, with faint white foam tracing the quiet tide in the far background. Soft, cool ambient light from the overcast sky evenly illuminates her silhouette, creating a gentle highlight along her rigid shoulders and the pale folds of her gown. Her chin remains slightly lifted and her neutral gaze stays locked forward without blinking, her chest showing no respiratory rise or fall throughout the take. The camera slowly and smoothly pulls out straight backward at a constant speed, gradually widening the framing to reveal the vast, desolate expanse of the empty beach as the woman diminishes into a small, solitary white figure anchored in the center of the darkening coastal landscape.
+overall_soundscape: The deep, continuous murmur of calm ocean swells breaking along the distant shore is clearly heard in the background, accompanied by the distinct, gentle hiss of retreating foam over wet sand. A subtle, low coastal breeze hums faintly across the open beach, accompanied by the muffled, distant lapping of calm seawater.
+non_diegetic_music: Sustained low bowed cello notes over a sparse, ambient glass harmonica drone, slow tempo, maintaining a steady and flat dynamic level with no rhythmic pulse or swells.</pre>
+      </details>
+      
+      <p class="review"><strong>观察记录</strong>约 0–8 秒人物一直正面站立，双臂垂下，镜头不断拉远。背景海浪仍在动，适合演示“画面在动，主体静止”。该静止来自 prompt 的明确要求。</p>
+    </article>
+    <article class="card good">
+      <header><div><p class="design-label">正例设计</p></div><div class="metadata"><span class="status">已完成</span> <span>8 秒</span></div></header>
+      <video preload="metadata" playsinline controls src="videos/04_good.mp4" poster="posters/04_good.jpg"></video>
+      
+      <details>
+        <summary>原始 prompt</summary>
+        <pre>8秒写实短片，横屏16:9。傍晚的海边，一名穿白裙的女子沿海岸线缓步前行，中途转头看向海面，抬手把被风吹乱的头发拨到耳后，裙摆随风摆动。</pre>
+      </details>
+      
+      <details>
+        <summary>PE 后 prompt</summary>
+        <pre>integrated_multimodal_description: [Shot 1] Cinematic, a medium full shot at eye level captures a serene coastal scene at dusk, where the camera executes a smooth tracking shot traveling backward and slightly sideways to keep pace with a woman walking along the shoreline. The woman, in her mid-20s with a slender frame and shoulder-length wavy dark brown hair, is positioned in the center-right of the frame. She wears an ankle-length white linen sundress with thin shoulder straps and a relaxed silhouette, walking barefoot on the wet, compacted sand. To her right, gentle ocean waves roll inward, their crests breaking into white foam that laps close to her feet, reflecting the pastel gradient of the evening sky. The background reveals an expansive sea stretching toward a soft horizon tinted with dusky rose, pale amber, and deepening violet twilight hues, with cool ambient evening light casting a soft, diffuse glow across the coastal expanse. As she ambles slowly forward, she eases her pace and turns her head toward the open water to her right, gazing out at the rhythmic swell of the tide. The seaside breeze catches strands of her hair and blows them lightly across her cheek and lips; she raises her right hand, gracefully tucking the loose locks behind her ear before letting her arm settle back down. Her shoulders ease as she takes a quiet breath, her expression calm and reflective, while the hem of her white dress flutters and ripples rhythmically in the ocean wind as she continues her slow stride along the water's edge.
+overall_soundscape: The continuous, distinct rushing sound of ocean waves surging and breaking into foam dominates the foreground, accompanied by the audible fizzing and hissing of seafoam receding over wet sand. The soft, rhythmic squelch of bare feet pressing into damp coastal sand is clearly heard with each step, layered beneath the gentle fluttering sound of linen cloth flapping in the persistent coastal breeze and a faint, low ambient whistling of wind across the shoreline.
+non_diegetic_music: A minimalist ambient acoustic track featuring sparse, resonant notes on a nylon-string guitar accompanied by a warm, sustained low cello drone, progressing at a slow and unhurried tempo with a completely flat, level dynamic.</pre>
+      </details>
+      
+      <p class="review"><strong>观察记录</strong>女子沿海岸行走，约 2.6–4.4 秒抬手拨头发。手臂、步态和裙摆都有可辨运动。</p>
+    </article></div>
+    </section>
+
+    <section class="group" id="group-5">
+      <div class="group-heading">
+        <div><p class="eyebrow">第 5 组</p><h2>主体数量不一致（含主体复制）-P0</h2></div>
+        <button class="sync" type="button" data-group="group-5">同步播放</button>
+      </div>
+      <p class="criterion"><strong>判定标准</strong>坏视频中切镜前后红裙女子数量不稳定，或主角被复制。好视频中主角始终只有一人。</p>
+      <div class="cards">
+    <article class="card bad">
+      <header><div><p class="design-label">反例设计</p></div><div class="metadata"><span class="status">已完成</span> <span>10.12 秒</span></div></header>
+      <video preload="metadata" playsinline controls src="videos/05_bad.mp4" poster="posters/05_bad.jpg"></video>
+      
+      <details>
+        <summary>原始 prompt</summary>
+        <pre>10秒写实短片，横屏16:9，3个镜头硬切。咖啡厅内，镜头1：一名穿红裙、黑长发的女主角坐在窗边。镜头2：同一咖啡厅，女主角和另外两名同样穿红裙、黑长发的女子并排坐着。镜头3：回到窗边，只有女主角一人。</pre>
+      </details>
+      
+      <details>
+        <summary>PE 后 prompt</summary>
+        <pre>integrated_multimodal_description: [Shot 1] Cinematic, medium close-up shot, the camera maintains a static shot. A slender East Asian woman in her mid-20s with porcelain skin and straight waist-length jet-black hair parted down the middle sits at a polished dark wood table beside a large cafe window. She wears a vibrant crimson-red silk slip dress with thin shoulder straps. Positioned in the left-center of the frame in a three-quarter profile, she holds a white ceramic coffee cup with both hands, faint wisps of steam curling upward from the rim. Through the rain-streaked windowpane behind her, blurred streetlights form soft golden and amber bokeh against the overcast twilight. A small glass bud vase holding a single dried flower rests near the table edge. Soft daylight from the window illuminates the side of her face, complemented by the warm glow of an overhead brass pendant lamp. She stares pensively through the glass, her eyelashes fluttering once, before her index finger lightly taps against the warm ceramic mug. [Shot 2] At 00:03.400, the camera cuts to a medium shot, static shot. Inside the same cafe, the woman in the red dress from Shot 1 sits centered on a deep-green velvet banquette booth, flanked symmetrically by two identical-looking women of the same age and build. Both accompanying women wear the exact same crimson-red silk slip dress, with identical sleek, waist-length black hair draping over their bare shoulders. All three women sit upright side-by-side in synchronized posture, their hands folded neatly in their laps. On the dark mahogany table in front of each woman sits an identical white ceramic coffee cup. Behind them, dark wood-paneled walls are decorated with small vintage brass picture frames. Direct overhead tungsten light casts soft shadows across their collarbones. The three women stare blankly toward the camera before simultaneously turning their heads slightly toward the right in unison, their neutral expressions remaining completely unchanged. [Shot 3] At 00:06.800, the shot transitions to a medium close-up shot as the camera physically pushes in slowly. Returning to the window table, the woman in the red dress from Shot 1 sits entirely alone once more, occupying the center of the frame. Only a single white coffee cup remains on the wooden tabletop beside the dried flower vase. Cool blue twilight filters through the rain-streaked window behind her, mingling with the soft golden spill from the pendant lamp above. Her shoulders rise and fall as she takes a gentle breath, lowering her gaze from the glass to the swirling dark surface of her coffee. She slowly lifts her right hand, delicately tucking a stray strand of black hair behind her ear, her expression quiet and solitary.
+overall_soundscape: A gentle patter of rain against the window glass and quiet low-frequency cafe room tone hum steadily in the background, accompanied by the distinct clink of a ceramic mug touching the wooden saucer, followed by the subtle rustle of silk fabric as the woman shifts and lifts her hand.
+non_diegetic_music: Solo upright piano, slow tempo, with sustained low cello notes underneath, maintaining an even volume with no swell.</pre>
+      </details>
+      
+      <p class="review"><strong>观察记录</strong>约 3.42–6.79 秒，画面中间出现三名妆发、衣着近乎相同的红裙女子，两侧镜头都只有一人。原始 prompt 和 PE 均明确要求这个人数变化。</p>
+    </article>
+    <article class="card good">
+      <header><div><p class="design-label">正例设计</p></div><div class="metadata"><span class="status">已完成</span> <span>10.12 秒</span></div></header>
+      <video preload="metadata" playsinline controls src="videos/05_good.mp4" poster="posters/05_good.jpg"></video>
+      
+      <details>
+        <summary>原始 prompt</summary>
+        <pre>10秒写实短片，横屏16:9，3个镜头硬切。咖啡厅内，镜头1：一名穿红裙、黑长发的女主角坐在窗边。镜头2：同一咖啡厅，女主角和一名穿蓝色西装的男子面对面坐着。镜头3：回到窗边，女主角一人，男子已离开。</pre>
+      </details>
+      
+      <details>
+        <summary>PE 后 prompt</summary>
+        <pre>integrated_multimodal_description: [Shot 1] Cinematic, medium close-up, three-quarter view with the camera executing a slow push in toward a solitary woman in her late twenties with waist-length straight black hair, wearing an elegant sleeveless crimson silk dress. She sits positioned in the center-left of the frame beside a tall floor-to-ceiling glass window inside a stylish café. Soft, diffused daylight filters through the glass, casting gentle highlights along her cheekbones and the glossy sheen of her hair, while warm tungsten pendant lamps glow softly in the blurred background. On the polished walnut tabletop before her rests a white ceramic coffee cup with a subtle swirl of latte art. She cradles the warm cup with both hands, slowly turns her head to gaze thoughtfully out at the rainy city street beyond the glass, and lets out a barely perceptible breath as her shoulders gently settle. [Shot 2] At 00:03.300, the camera cuts to a balanced medium two-shot maintaining a static shot from the side profile of the table. The woman in the red dress from Shot 1 sits on the left side of the frame, while directly opposite her sits a handsome man in his early thirties with short slicked-back dark hair, dressed in a tailored navy blue wool suit jacket over a crisp white open-collar dress shirt. Two coffee cups and a small glass water tumbler sit between them on the wood surface. The man leans slightly forward with his forearms resting on the table, fixing an earnest, intense gaze upon her face. The woman momentarily lowers her eyelids, her fingers stiffening slightly around her cup before she looks up to meet his eyes, her lips parted in slight hesitation. [Shot 3] At 00:06.800, the camera cuts back to a medium shot of the window table as the camera performs a slow pull out. The woman in the red dress from Shot 1 sits alone on the left, but the chair opposite her is now completely vacant, pushed back an inch from the table. Across from her sits an untouched, cooling ceramic cup on a white saucer with no one behind it. She stares fixedly at the empty wooden chair, her left hand slowly releasing her own cup to drop lightly onto her lap, before she gradually shifts her melancholy gaze back toward the rain-streaked window pane as daylight slowly dims outside.
+overall_soundscape: A gentle café interior room tone hums underneath, punctuated by the audible clink of ceramic against a saucer as the woman adjusts her cup, followed by the pronounced low rustle of tailored wool suit fabric against the wooden chair. Distinct soft raindrops tap rhythmically against the exterior window glass, accompanied by the distant muffled murmur of espresso machines and muted traffic from outside.
+non_diegetic_music: A minimalist solo acoustic piano plays a sparse, slow-tempo chord progression accompanied by a sustained low cello drone, maintaining an even, understated dynamic without rhythmic percussion or sudden swells.</pre>
+      </details>
+      
+      <p class="review"><strong>观察记录</strong>约 3.33 秒切到两人对坐，红裙女子对面出现蓝西装男子。约 6.79 秒回到独坐画面，三个镜头都只有一名红裙主体。</p>
+    </article></div>
+    </section>
+
+    <section class="group" id="group-6">
+      <div class="group-heading">
+        <div><p class="eyebrow">第 6 组</p><h2>风格不一致-P0</h2></div>
+        <button class="sync" type="button" data-group="group-6">同步播放</button>
+      </div>
+      <p class="criterion"><strong>判定标准</strong>坏视频切镜后画风与镜头1明显不同。好视频前后画风一致。</p>
+      <div class="cards">
+    <article class="card bad">
+      <header><div><p class="design-label">反例设计</p></div><div class="metadata"><span class="status">已完成</span> <span>10.12 秒</span></div></header>
+      <video preload="metadata" playsinline controls src="videos/06_bad.mp4" poster="posters/06_bad.jpg"></video>
+      
+      <details>
+        <summary>原始 prompt</summary>
+        <pre>10秒短片，横屏16:9，2个镜头硬切。镜头1：日系水彩动画风格，少女在樱花树下回头微笑。镜头2：写实摄影风格，同一少女在樱花树下低头看手机。</pre>
+      </details>
+      
+      <details>
+        <summary>PE 后 prompt</summary>
+        <pre>integrated_multimodal_description: [Shot 1] Watercolor, a medium shot at eye level as the camera pushes in slowly on a teenage girl standing beneath a blossoming cherry tree. Rendered in traditional Japanese watercolor anime aesthetics with soft pigment washes and delicate ink linework, the girl has shoulder-length soft chestnut hair tied loosely at the side, fair translucent skin, and large expressive eyes. She wears a navy-blue sailor-collar school uniform with a crimson scarf tied neatly at her chest and a short-sleeved white blouse. Positioned in the center-right of the frame against a backdrop of pastel pink floral clusters and translucent green foliage, she stands with her back three-quarters to the camera. Soft, diffused morning daylight with pale paper-texture undertones bathes the scene. A light breeze rustles the boughs, sending watercolor-textured pink petals floating across the foreground. She smoothly turns her head over her left shoulder toward the lens, her bangs parting gently, and breaks into a serene, radiant smile with slightly crinkled eyes, her shoulders relaxing as her gaze meets the viewer. [Shot 2] At 00:05.000, the camera cuts to a photorealistic cinematic medium close-up, where the camera holds a static shot of the same girl from Shot 1 in real-life live-action. Now captured with lifelike photographic texture, the East Asian girl, around seventeen years old with natural porcelain skin and silky dark brown hair resting on her shoulders, wears a navy-blue cotton sailor-collar uniform with crisp white trim. She stands centered under the textured, dark gnarled bark of an actual blooming cherry blossom tree, whose vibrant pink petals form a shallow-depth-of-field bokeh in the soft afternoon light. Natural sunlight filters through the branches, creating gentle dappled patterns across her forehead and shoulders, while a soft cool reflection from her phone screen subtly illuminates her chin. Looking downward, she holds a sleek black smartphone with both hands at chest height, her thumbs deftly scrolling across the glass screen. Her lips remain softly closed in quiet concentration, her eyelashes casting delicate shadows over her cheeks as she blinks and tilts her chin slightly lower, completely absorbed in her device while a lone fallen petal drifts onto her navy collar.
+overall_soundscape: A gentle spring breeze rustling through tree leaves is clearly heard alongside the distinct, airy flutter of falling petals. In the foreground, the faint rustle of cotton fabric accompanies the turn, which transitions after the cut into the audible, precise click and tap of thumbs against a glass smartphone screen, backed by distant, muffled ambient park birds chirping softly.
+non_diegetic_music: A solo acoustic piano piece plays at a slow tempo, featuring sparse, warm chord voicings in the lower register beneath delicate high-register notes that sustain and decay naturally, maintaining a steady, unhurried dynamic volume throughout.</pre>
+      </details>
+      
+      <p class="review"><strong>观察记录</strong>约 4.88 秒，同样的樱花树和校服少女从水彩动画直接切成真人摄影。原始 prompt 和 PE 都明确要求切换风格。</p>
+    </article>
+    <article class="card good">
+      <header><div><p class="design-label">正例设计</p></div><div class="metadata"><span class="status">已完成</span> <span>10.12 秒</span></div></header>
+      <video preload="metadata" playsinline controls src="videos/06_good.mp4" poster="posters/06_good.jpg"></video>
+      
+      <details>
+        <summary>原始 prompt</summary>
+        <pre>10秒短片，横屏16:9，2个镜头硬切，全片统一为日系水彩动画风格。镜头1：少女在樱花树下回头微笑。镜头2：同一少女在樱花树下低头看手机，画风保持水彩不变。</pre>
+      </details>
+      
+      <details>
+        <summary>PE 后 prompt</summary>
+        <pre>integrated_multimodal_description: [Shot 1] Watercolor-animated, a medium shot at eye level as the camera pushes in at slow speed toward a teenage girl standing beneath a blooming cherry blossom tree. She has chin-length dark brown hair with soft bangs tucked behind one ear, styled with a pale blue ribbon, and wears a classic navy-and-white sailor school uniform with a pleated skirt rendered in soft watercolor bleeds on textured paper. Positioned slightly to the left of center, her back is initially angled toward the viewer as translucent pink and white cherry petals drift diagonally through the frame. Dappled spring sunlight filters through the overhanging branches above, casting soft, layered pastel shadows on her shoulders and the pale stone path beneath her feet. In a fluid motion, she gently rotates her torso and turns her head over her shoulder, her hair shifting in the spring breeze, and her lips part into a warm, gentle smile with soft pink blush washes blooming on her cheeks as she blinks softly. [Shot 2] At 00:05.200, the camera cuts to a medium close-up from a high-three-quarter profile angle with a static shot framing the teenage girl from Shot 1. She now tilts her head down toward a modern silver smartphone cradled in both hands in the lower center foreground. The watercolor textures remain consistent, with visible pigment pooling along the edges of the hand-painted cherry branches that frame the upper edge of the composition. Her slender thumbs make light scrolling motions across the screen, her dark eyelashes casting delicate painted shadows on her cheeks, while a single stray petal flutters past her fingers and settles briefly on her sleeve before sliding away.
+overall_soundscape: A gentle spring breeze rustles audibly through the leafy cherry blossom canopy, accompanied by the distinct soft fluttering of drifting petals. Fabric rustles distinctly as the girl turns her shoulders, followed by the pronounced light tap and faint glide of a thumb contacting the glass smartphone screen in the foreground, with distant, faint chirping of sparrows audible throughout.
+non_diegetic_music: A delicate acoustic nylon-string guitar and warm solo piano playing a gentle arpeggiated melody at a slow, reflective tempo, maintaining a steady, quiet dynamic with no sudden swells.</pre>
+      </details>
+      
+      <p class="review"><strong>观察记录</strong>约 5.13 秒，从樱花树下回头切到低头看手机。两个镜头都保留水彩动画的线条和质感。</p>
+    </article></div>
+    </section>
+</main>
+<script>
+document.querySelectorAll('.group').forEach((group) => {
+  const videos = [...group.querySelectorAll('video')];
+  const button = group.querySelector('.sync');
+  let paired = false;
+  const refresh = () => {
+    button.textContent = paired && videos.some(v => !v.paused && !v.ended) ? '同步暂停' : '同步播放';
+  };
+  button.disabled = videos.length < 2;
+  button.addEventListener('click', async () => {
+    if (paired) {
+      paired = false;
+      videos.forEach(v => v.pause());
+    } else {
+      const start = videos.some(v => v.ended) ? 0 : Math.min(...videos.map(v => v.currentTime));
+      videos.forEach(v => { v.currentTime = start; });
+      paired = true;
+      await Promise.allSettled(videos.map(v => v.play()));
+    }
+    refresh();
+  });
+  videos.forEach(video => {
+    video.addEventListener('ended', () => {
+      if (videos.every(v => v.ended || v.paused)) paired = false;
+      refresh();
+    });
+    video.addEventListener('pause', () => {
+      if (paired && !video.ended && video.currentTime < video.duration - 0.08) {
+        paired = false;
+        videos.forEach(v => v.pause());
+      }
+      refresh();
+    });
+  });
+});
+</script>
+</body></html>
