@@ -305,8 +305,27 @@ document.querySelectorAll('.group').forEach((group) => {
       paired = false;
       videos.forEach(v => v.pause());
     } else {
+      button.disabled = true;
+      button.textContent = '正在缓冲…';
+      const ready = v => new Promise(resolve => {
+        if (v.readyState >= 3) { resolve(true); return; }
+        const finish = () => {
+          clearTimeout(timer);
+          v.removeEventListener('canplay', finish);
+          v.removeEventListener('error', finish);
+          resolve(v.readyState >= 3);
+        };
+        const timer = setTimeout(finish, 60000);
+        v.addEventListener('canplay', finish);
+        v.addEventListener('error', finish);
+        v.preload = 'auto';
+        if (v.networkState === HTMLMediaElement.NETWORK_EMPTY || !v.currentSrc) v.load();
+      });
+      const bothReady = await Promise.all(videos.map(ready));
+      button.disabled = false;
+      if (!bothReady.every(Boolean)) { button.textContent = '重试同步播放'; return; }
       const start = videos.some(v => v.ended) ? 0 : Math.min(...videos.map(v => v.currentTime));
-      videos.forEach(v => { v.currentTime = start; });
+      videos.forEach(v => { if (Math.abs(v.currentTime - start) > 0.02) v.currentTime = start; });
       paired = true;
       await Promise.allSettled(videos.map(v => v.play()));
     }
