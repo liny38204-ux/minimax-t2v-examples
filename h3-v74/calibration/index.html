@@ -239,8 +239,19 @@ document.querySelectorAll('nav a').forEach(a=>a.onclick=()=>{if(document.querySe
 document.querySelectorAll('article button').forEach(button=>{
  button.onclick=()=>{
    const video=button.closest('article').querySelector('video');
-   if(button.dataset.frame!==undefined) { video.pause(); video.currentTime=(Number(button.dataset.frame)+.25)/24; }
-   else { video.currentTime=Number(button.dataset.play); video.play(); }
+   if(button.dataset.frame!==undefined) {
+     video.pause();
+     const target=(Number(button.dataset.frame)+.25)/24;
+     if(video.readyState>0) { video.currentTime=target; return; }
+     video.dataset.pendingTime=target;
+     if(video.preload!=='auto') {
+       video.addEventListener('loadedmetadata',()=>{
+         video.currentTime=Number(video.dataset.pendingTime);
+       },{once:true});
+       video.preload='auto';
+       video.load();
+     }
+   } else { video.currentTime=Number(button.dataset.play); video.play(); }
  };
 });
 apply();
