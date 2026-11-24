@@ -1,0 +1,1582 @@
+[
+  {
+    "row": 24,
+    "label": "文字时序／样式／位置偏差—P1",
+    "dimension": "视频指令遵循",
+    "origin": "postproduced_calibration",
+    "guide": "看底部中央。前4秒没有字幕，第5–7秒才出现“早安”。",
+    "method": "从同一源片统一清除原字幕带；control仅2–4秒叠加“早安”，edited仅5–7秒叠加相同字形和位置。",
+    "source_guide": "总表第 24 行",
+    "duration_seconds": 8.0,
+    "fps": 24,
+    "frames": 192,
+    "videos": {
+      "control": "videos/r024_control.mp4",
+      "edited": "videos/r024_edited.mp4",
+      "comparison": "videos/r024_comparison.mp4",
+      "lossless_master": ""
+    },
+    "hashes": {
+      "control": "59129bf7a554ca33377cd6a1787566d903e0a4548f1a902508e977ca874c7161",
+      "edited": "70d1d4a6475d47191dea2489deb35b6cc84ab38044700d62a049a5964822c233"
+    },
+    "evidence": [
+      "evidence/r024_frames.jpg"
+    ],
+    "poster": [
+      "posters/r024.jpg"
+    ],
+    "start": 5.0,
+    "source_notes": {
+      "origin": "同源后期制作标注校准样片",
+      "编辑区间": [
+        [
+          2,
+          4
+        ],
+        [
+          5,
+          7
+        ]
+      ]
+    }
+  },
+  {
+    "row": 26,
+    "label": "字幕禁止失败—P0",
+    "dimension": "视频指令遵循",
+    "origin": "postproduced_calibration",
+    "guide": "看底部中央。人物说话时出现明确的“明天见”字幕。",
+    "method": "在无字幕正例上叠加白字黑描边字幕。",
+    "source_guide": "总表第 26 行",
+    "duration_seconds": 8.0,
+    "fps": 24,
+    "frames": 192,
+    "videos": {
+      "control": "videos/r026_control.mp4",
+      "edited": "videos/r026_edited.mp4",
+      "comparison": "videos/r026_comparison.mp4",
+      "lossless_master": ""
+    },
+    "hashes": {
+      "control": "44ef97a8a53929360c114b90da1b2d0dedf31811d94779949b446b9f5bdb100c",
+      "edited": "1c66a5d24d002922933c84b2b7f5d051aa0a1142a395ad062e9622f404784943"
+    },
+    "evidence": [
+      "evidence/r026_frames.jpg"
+    ],
+    "poster": [
+      "posters/r026.jpg"
+    ],
+    "start": 2.0,
+    "source_notes": {
+      "origin": "同源后期制作标注校准样片",
+      "编辑区间": [
+        2,
+        6
+      ]
+    }
+  },
+  {
+    "row": 30,
+    "label": "主体人／物持续结构错误—P0",
+    "dimension": "运动质量",
+    "origin": "postproduced_calibration",
+    "guide": "看握笔右手。第2–6秒食指与中指间的皮纹连续相连，放笔后恢复。",
+    "method": "从同帧相邻手指提取皮纹，以非刚性横向拉伸和seamlessClone融合到指缝；未加入纯色图层。",
+    "source_guide": "总表第 30 行",
+    "duration_seconds": 8.0,
+    "fps": 24,
+    "frames": 192,
+    "videos": {
+      "control": "videos/r030_control.mp4",
+      "edited": "videos/r030_edited.mp4",
+      "comparison": "videos/r030_comparison.mp4",
+      "lossless_master": ""
+    },
+    "hashes": {
+      "control": "8ddb5475a64759f28d86de3c33ad58a50d40ff9d198fb15816f0e1ba12dcc69f",
+      "edited": "7fba8b29e09dd33f7cfcb0e2209b171df18569db267c3b9cf459d1a8a651941a"
+    },
+    "evidence": [
+      "evidence/r030_frames.jpg"
+    ],
+    "poster": [
+      "posters/r030.jpg"
+    ],
+    "start": 2.0,
+    "source_notes": {
+      "origin": "同源后期制作标注校准样片",
+      "编辑区间": [
+        2,
+        6
+      ]
+    }
+  },
+  {
+    "row": 31,
+    "label": "背景人／物持续结构错误—P1",
+    "dimension": "运动质量",
+    "origin": "postproduced_calibration",
+    "guide": "看左后方长椅人物的袖口到手。第2–6秒手腕被纵向拉长，前景站立者正常。",
+    "method": "仅从同帧袖口/手腕窄条提取皮肤和布料纹理，纵向伸长并以椭圆羽化边缘融合；未使用矩形覆盖。",
+    "source_guide": "总表第 31 行",
+    "duration_seconds": 8.0,
+    "fps": 24,
+    "frames": 192,
+    "videos": {
+      "control": "videos/r031_control.mp4",
+      "edited": "videos/r031_edited.mp4",
+      "comparison": "videos/r031_comparison.mp4",
+      "lossless_master": ""
+    },
+    "hashes": {
+      "control": "d7a16dfee07cdeea2c89efbef003e305f157ae1a9ea64dfd2cca987499fb4a62",
+      "edited": "3723af863733afdfe16f968cffaafef33f002531a46e320fa74858949726a61b"
+    },
+    "evidence": [
+      "evidence/r031_frames.jpg",
+      "evidence/r031_closeup.jpg"
+    ],
+    "poster": [
+      "posters/r031.jpg"
+    ],
+    "start": 2.0,
+    "source_notes": {
+      "origin": "同源后期制作标注校准样片",
+      "编辑区间": [
+        2,
+        6
+      ]
+    }
+  },
+  {
+    "row": 34,
+    "label": "文字／logo崩坏—P0",
+    "dimension": "运动质量",
+    "origin": "postproduced_calibration",
+    "guide": "第 4 秒起看 BORN。个别字母的笔画会突然消失、重叠和串位。视频下半部将印字转正放大。",
+    "method": "跟踪印字，按相邻帧的离散状态改变笔画拓扑。",
+    "source_guide": "总表第 34 行",
+    "duration_seconds": 8.0,
+    "fps": 24,
+    "frames": 192,
+    "videos": {
+      "control": "videos/r034_control.mp4",
+      "edited": "videos/r034_edited.mp4",
+      "comparison": "videos/r034_comparison.mp4",
+      "lossless_master": ""
+    },
+    "hashes": {
+      "control": "9b350b397f8cda79d41ba543e8496155d8c6bb86356c46138da6c25af4b4a518",
+      "edited": "10eb6f4d35288662266964a45783e2de5a5ed1cd92ee9e0e7388d9c1635866c3"
+    },
+    "evidence": [],
+    "poster": [
+      "posters/r034.jpg"
+    ],
+    "start": 3.65,
+    "source_notes": {
+      "origin": "postproduced_calibration",
+      "source_model": "MiniMax-H3",
+      "edited_roi_xyxy": [
+        641,
+        260,
+        779,
+        672
+      ]
+    }
+  },
+  {
+    "row": 35,
+    "label": "五官崩坏—P0",
+    "dimension": "运动质量",
+    "origin": "postproduced_calibration",
+    "guide": "看眨眼瞬间。左眼滑到鼻梁附近，约0.75秒后回位。",
+    "method": "从同帧提取左眼局部，以羽化椭圆掩膜向鼻梁平移。",
+    "source_guide": "总表第 35 行",
+    "duration_seconds": 8.0,
+    "fps": 24,
+    "frames": 192,
+    "videos": {
+      "control": "videos/r035_control.mp4",
+      "edited": "videos/r035_edited.mp4",
+      "comparison": "videos/r035_comparison.mp4",
+      "lossless_master": ""
+    },
+    "hashes": {
+      "control": "c45b2396783a4d75407eab166d4ad5f6250aac89b8f9ab93a232ab151306ea76",
+      "edited": "31b9f707449aef3f9abd6d4607723daca46fd78f96a630c2d265064a673d020e"
+    },
+    "evidence": [
+      "evidence/r035_frames.jpg"
+    ],
+    "poster": [
+      "posters/r035.jpg"
+    ],
+    "start": 2.75,
+    "source_notes": {
+      "origin": "同源后期制作标注校准样片",
+      "编辑区间": [
+        2.75,
+        3.5
+      ]
+    }
+  },
+  {
+    "row": 36,
+    "label": "肢体崩坏—P0",
+    "dimension": "运动质量",
+    "origin": "postproduced_calibration",
+    "guide": "看翻掌中最上方两指。第4–4.5秒两指间皮纹连续，指缝消失，随后恢复。",
+    "method": "从同帧上方手指提取皮纹，以局部非刚性拉伸和seamlessClone融合到两指之间；未加入纯色图层。",
+    "source_guide": "总表第 36 行",
+    "duration_seconds": 8.0,
+    "fps": 24,
+    "frames": 192,
+    "videos": {
+      "control": "videos/r036_control.mp4",
+      "edited": "videos/r036_edited.mp4",
+      "comparison": "videos/r036_comparison.mp4",
+      "lossless_master": ""
+    },
+    "hashes": {
+      "control": "afa346522f75457b2cb32bf20f62504131ad4a607c3a5a1298768ee395c07fd7",
+      "edited": "42ee9956b664049604c7ee29f85d8fdc52b72306680eadd549e5fc21ac2d4aa8"
+    },
+    "evidence": [
+      "evidence/r036_frames.jpg"
+    ],
+    "poster": [
+      "posters/r036.jpg"
+    ],
+    "start": 4.0,
+    "source_notes": {
+      "origin": "同源后期制作标注校准样片",
+      "编辑区间": [
+        4,
+        4.5
+      ]
+    }
+  },
+  {
+    "row": 38,
+    "label": "不合理转场／切镜／跳帧—P1",
+    "dimension": "运动质量",
+    "origin": "postproduced_calibration",
+    "guide": "看3秒切点。切前地毯刚离地，切后已高举，抬起过程被跳过。",
+    "method": "在3秒切点插入同源4.5秒的已抬高地毯画面并保持切后动作。",
+    "source_guide": "总表第 38 行",
+    "duration_seconds": 8.0,
+    "fps": 24,
+    "frames": 192,
+    "videos": {
+      "control": "videos/r038_control.mp4",
+      "edited": "videos/r038_edited.mp4",
+      "comparison": "videos/r038_comparison.mp4",
+      "lossless_master": ""
+    },
+    "hashes": {
+      "control": "f9102f3379ec748edc93377923801ec44c6845ddc164692cc495e9441e83af2b",
+      "edited": "f49d66382edcec001c213def30c8a9df1fa0e42742f4f069c759ed0e7e16f17b"
+    },
+    "evidence": [
+      "evidence/r038_frames.jpg"
+    ],
+    "poster": [
+      "posters/r038.jpg"
+    ],
+    "start": 3.0,
+    "source_notes": {
+      "origin": "同源后期制作标注校准样片",
+      "编辑区间": [
+        3,
+        4.5
+      ]
+    }
+  },
+  {
+    "row": 41,
+    "label": "穿模—P0",
+    "dimension": "运动质量",
+    "origin": "postproduced_calibration",
+    "guide": "看4.0–4.45秒中间两枚钢球：反例两球中心距离小于一个直径，轮廓实际贯穿；每球仍有独立双细线。",
+    "method": "以程序化金属球、逐层高光/阴影和独立双悬线重绘五球装置。control保留正常弹碰；edited仅在4.0–4.45秒将中间球平移58px产生贯穿。",
+    "source_guide": "总表第 41 行",
+    "duration_seconds": 8.0,
+    "fps": 24,
+    "frames": 192,
+    "videos": {
+      "control": "videos/r041_control.mp4",
+      "edited": "videos/r041_edited.mp4",
+      "comparison": "videos/r041_comparison.mp4",
+      "lossless_master": ""
+    },
+    "hashes": {
+      "control": "aa273113e3f4bfed5573acb064f8a4446fbab4f2b8dfd19114b6b3ae860c3d69",
+      "edited": "3c9ec8b61f42deeec2dd2e0931fceb247da9aabd8a233b5f14f50a92ed75b1d8"
+    },
+    "evidence": [
+      "evidence/r041_frames.jpg",
+      "evidence/r041_closeup.jpg"
+    ],
+    "poster": [
+      "posters/r041.jpg"
+    ],
+    "start": 4.0,
+    "source_notes": {
+      "origin": "程序化二维物理校准样片",
+      "编辑区间": [
+        4,
+        4.5
+      ]
+    }
+  },
+  {
+    "row": 45,
+    "label": "运动过快／抽搐—P1",
+    "dimension": "运动质量",
+    "origin": "postproduced_calibration",
+    "guide": "看第5–6秒头部。头沿原转向路线快速左右折返，肩和背景不动。",
+    "method": "提取头部椭圆区域按6帧循环左右平移，肩部和背景保留原帧。",
+    "source_guide": "总表第 45 行",
+    "duration_seconds": 8.0,
+    "fps": 24,
+    "frames": 192,
+    "videos": {
+      "control": "videos/r045_control.mp4",
+      "edited": "videos/r045_edited.mp4",
+      "comparison": "videos/r045_comparison.mp4",
+      "lossless_master": ""
+    },
+    "hashes": {
+      "control": "67687541e1977ff7b499121d4118cca284ef95582f138f8ce5b045e1e5f173d5",
+      "edited": "4c8a6655017ddb7c477e6acda1ce7bbb3096989fc07cd66f1cdd1ee5c24dfafd"
+    },
+    "evidence": [
+      "evidence/r045_frames.jpg",
+      "evidence/r045_closeup.jpg"
+    ],
+    "poster": [
+      "posters/r045.jpg"
+    ],
+    "start": 5.0,
+    "source_notes": {
+      "origin": "同源后期制作标注校准样片",
+      "编辑区间": [
+        5,
+        6
+      ]
+    }
+  },
+  {
+    "row": 48,
+    "label": "部分时间静止—P0",
+    "dimension": "运动质量",
+    "origin": "postproduced_calibration",
+    "guide": "右侧在约 0.42–1.42 秒冻结 24 帧，波峰与窗光倒影一起停住，随后从当地继续运动。左右均取自原片 2–8 秒，展示版为 6 秒。",
+    "method": "取 H3 正例第2–8秒同一段活跃水纹，成对输出6秒；校准片零基第10–33帧连续呈现同一画面，共24帧（约0.42–1.42秒），随后从该处继续波纹传播。",
+    "source_guide": "总表第 48 行",
+    "duration_seconds": 6.0,
+    "fps": 24,
+    "frames": 144,
+    "videos": {
+      "control": "videos/r048_control.mp4",
+      "edited": "videos/r048_edited.mp4",
+      "comparison": "videos/r048_comparison.mp4",
+      "lossless_master": ""
+    },
+    "hashes": {
+      "control": "83a61fa234558822cc889230188df130534044954dab9ed5b461b9b89f42f0ea",
+      "edited": "8559f4f3ca5171b284ecf7c7a57bd941c3861e3d33bfcbc8ee7b5c5fb78f958f"
+    },
+    "evidence": [],
+    "poster": [
+      "posters/r048.jpg"
+    ],
+    "start": 0.0,
+    "source_notes": {
+      "origin": "H3 正例成片，后期可控缺陷校准",
+      "source_start_seconds": 2,
+      "source_frame_index_zero_based": [
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        58,
+        58,
+        58,
+        58,
+        58,
+        58,
+        58,
+        58,
+        58,
+        58,
+        58,
+        58,
+        58,
+        58,
+        58,
+        58,
+        58,
+        58,
+        58,
+        58,
+        58,
+        58,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127,
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        140,
+        141,
+        142,
+        143,
+        144,
+        145,
+        146,
+        147,
+        148,
+        149,
+        150,
+        151,
+        152,
+        153,
+        154,
+        155,
+        156,
+        157,
+        158,
+        159,
+        160,
+        161,
+        162,
+        163,
+        164,
+        165,
+        166,
+        167,
+        168
+      ]
+    }
+  },
+  {
+    "row": 49,
+    "label": "背景活物静止—P1",
+    "dimension": "运动质量",
+    "origin": "postproduced_calibration",
+    "guide": "看床后方两侧家人。全段头肩和手势固定，前景医生仍在动作。",
+    "method": "冻结远处家人所在的左右背景区域，保留中央近景人物和床边区域的源帧动作。",
+    "source_guide": "总表第 49 行",
+    "duration_seconds": 8.0,
+    "fps": 24,
+    "frames": 192,
+    "videos": {
+      "control": "videos/r049_control.mp4",
+      "edited": "videos/r049_edited.mp4",
+      "comparison": "videos/r049_comparison.mp4",
+      "lossless_master": ""
+    },
+    "hashes": {
+      "control": "3f5903a535da5448bcd939e6ccb9fd577766d60b8b3c1651d93e40d1bbfa1258",
+      "edited": "ae8e0b19172c8ae5f6811635c5616661dd5ab25e31b97d824dd0805b334c19b1"
+    },
+    "evidence": [
+      "evidence/r049_frames.jpg",
+      "evidence/r049_closeup.jpg"
+    ],
+    "poster": [
+      "posters/r049.jpg"
+    ],
+    "start": 0.0,
+    "source_notes": {
+      "origin": "同源后期制作标注校准样片",
+      "编辑区间": [
+        0,
+        8
+      ]
+    }
+  },
+  {
+    "row": 58,
+    "label": "背景元素数量／属性不一致—P1",
+    "dimension": "时序一致性",
+    "origin": "postproduced_calibration",
+    "guide": "切镜前两边都有木椅。切后看读书人左侧门旁，右侧的扶背木椅消失，原位置仍可见。",
+    "method": "逐帧跟踪第二镜门板，用沿座椅轮廓的窄掩模清除椅背、座面、椅脚和部分投影，局部补回同帧门板和墙面。",
+    "source_guide": "总表第 58 行",
+    "duration_seconds": 10.125,
+    "fps": 24,
+    "frames": 243,
+    "videos": {
+      "control": "videos/r058_control.mp4",
+      "edited": "videos/r058_edited.mp4",
+      "comparison": "videos/r058_comparison.mp4",
+      "lossless_master": ""
+    },
+    "hashes": {
+      "control": "26fcdf9624d89ee9a8de270cadf3ec6eaf05d516f7913481a25553c4b6a078c9",
+      "edited": "d7cc89b917d5591fe74792588ddaf32ea2830eeaa7cc06330ef563f99a32e8a2"
+    },
+    "evidence": [
+      "evidence/r058_frames.jpg"
+    ],
+    "poster": [
+      "posters/r058.jpg"
+    ],
+    "start": 3.4,
+    "source_notes": {
+      "origin": "postproduced_calibration",
+      "window_seconds": [
+        3.875,
+        10.125
+      ],
+      "limitation": "原椅遮挡区域使用内容补全，放大可见局部修补纹理。"
+    }
+  },
+  {
+    "row": 61,
+    "label": "尾帧突变—P0",
+    "dimension": "时序一致性",
+    "origin": "postproduced_calibration",
+    "guide": "右侧前 191 帧为地球仪，第 192 帧硬切到红杯，正常播放只闪约 42 毫秒。",
+    "method": "正例解码为yuv420p后保留前191帧。仅用旧反例的第192帧替换末帧。视频以无损x264重编码，正例AAC音轨逐包复制。",
+    "source_guide": "总表第 61 行",
+    "duration_seconds": 8.0,
+    "fps": 24,
+    "frames": 192,
+    "videos": {
+      "control": "videos/r061_control.mp4",
+      "edited": "videos/r061_edited.mp4",
+      "comparison": "videos/r061_comparison.mp4",
+      "lossless_master": "videos/r061_lossless_master.mp4"
+    },
+    "hashes": {
+      "control": "1864b6f9b38c7267fa9c2a91cf5305c710c078b2b6c91926d518327da225102b",
+      "edited": "9460965c05315c57d9aa788c83d0bea3ba4daf8d33518ef5562a20dfa96e0985"
+    },
+    "evidence": [
+      "evidence/r061_frames.jpg"
+    ],
+    "poster": [
+      "posters/r061.jpg"
+    ],
+    "start": 7.05,
+    "source_notes": {
+      "origin": "同源后期制作标注校准样片",
+      "frame_indices_zero_based": {
+        "unchanged_from_control": [
+          0,
+          190
+        ],
+        "replaced": 191
+      }
+    }
+  },
+  {
+    "row": 64,
+    "label": "卡顿／掉帧／拖影—P0",
+    "dimension": "美感与画质",
+    "origin": "postproduced_calibration",
+    "guide": "右侧每 6 帧只更新一次画面。人物和墙纹同时停、同时跳，每秒只有 4 幅不同画面。",
+    "method": "每6个输出帧共享组内第1帧。24 fps容器中每秒4幅不同画面，舞者、墙纹和机位同帧停、同帧跳。",
+    "source_guide": "总表第 64 行",
+    "duration_seconds": 8.0,
+    "fps": 24,
+    "frames": 192,
+    "videos": {
+      "control": "videos/r064_control.mp4",
+      "edited": "videos/r064_edited.mp4",
+      "comparison": "videos/r064_comparison.mp4",
+      "lossless_master": ""
+    },
+    "hashes": {
+      "control": "df2d86174fdbb90b27fb1b1bf09679409c72436776697ef58789727991fcef1d",
+      "edited": "97db398092ae1a641028ecf9fc5900c5608b9b483faf8162af615d116b15ba4b"
+    },
+    "evidence": [],
+    "poster": [
+      "posters/r064.jpg"
+    ],
+    "start": 1.0,
+    "source_notes": {
+      "origin": "H3 正例成片，后期可控缺陷校准",
+      "source_start_seconds": 0,
+      "source_frame_index_zero_based": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        54,
+        54,
+        54,
+        54,
+        54,
+        54,
+        60,
+        60,
+        60,
+        60,
+        60,
+        60,
+        66,
+        66,
+        66,
+        66,
+        66,
+        66,
+        72,
+        72,
+        72,
+        72,
+        72,
+        72,
+        78,
+        78,
+        78,
+        78,
+        78,
+        78,
+        84,
+        84,
+        84,
+        84,
+        84,
+        84,
+        90,
+        90,
+        90,
+        90,
+        90,
+        90,
+        96,
+        96,
+        96,
+        96,
+        96,
+        96,
+        102,
+        102,
+        102,
+        102,
+        102,
+        102,
+        108,
+        108,
+        108,
+        108,
+        108,
+        108,
+        114,
+        114,
+        114,
+        114,
+        114,
+        114,
+        120,
+        120,
+        120,
+        120,
+        120,
+        120,
+        126,
+        126,
+        126,
+        126,
+        126,
+        126,
+        132,
+        132,
+        132,
+        132,
+        132,
+        132,
+        138,
+        138,
+        138,
+        138,
+        138,
+        138,
+        144,
+        144,
+        144,
+        144,
+        144,
+        144,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        156,
+        156,
+        156,
+        156,
+        156,
+        156,
+        162,
+        162,
+        162,
+        162,
+        162,
+        162,
+        168,
+        168,
+        168,
+        168,
+        168,
+        168,
+        174,
+        174,
+        174,
+        174,
+        174,
+        174,
+        180,
+        180,
+        180,
+        180,
+        180,
+        180,
+        186,
+        186,
+        186,
+        186,
+        186,
+        186
+      ]
+    }
+  },
+  {
+    "row": 65,
+    "label": "颗粒感／噪点／杂质／闪烁—P0",
+    "dimension": "美感与画质",
+    "origin": "postproduced_calibration",
+    "guide": "第 6 秒起看右侧浅墙和帘布，细黑白点不断换位。窗光和织物运动照常。",
+    "method": "在选定的墙面和帘布区域叠加时空独立亮暗脉冲，点径约 2–5 个原图像素。",
+    "source_guide": "总表第 65 行",
+    "duration_seconds": 8.0,
+    "fps": 24,
+    "frames": 192,
+    "videos": {
+      "control": "videos/r065_control.mp4",
+      "edited": "videos/r065_edited.mp4",
+      "comparison": "videos/r065_comparison.mp4",
+      "lossless_master": ""
+    },
+    "hashes": {
+      "control": "93c1bba125acd916b75c0c44f16d05bb18fa8072ddff50c2237f7ed6abd27d35",
+      "edited": "1073b5b1749b1c4d3e5d7ff5384dfa450ce4b3f9c62feb4f2f4669c5c1e27c8e"
+    },
+    "evidence": [
+      "evidence/r065_frames.jpg",
+      "evidence/r065_closeup.jpg"
+    ],
+    "poster": [
+      "posters/r065.jpg"
+    ],
+    "start": 5.6,
+    "source_notes": {
+      "origin": "postproduced_calibration",
+      "window_seconds": [
+        6,
+        8
+      ],
+      "evidence_times_seconds": [
+        5.75,
+        6.5,
+        7.7
+      ]
+    }
+  },
+  {
+    "row": 67,
+    "label": "色域断层—P1",
+    "dimension": "美感与画质",
+    "origin": "postproduced_calibration",
+    "guide": "看镜中人物后方的灰墙和窗光边缘，第 6 秒起渐变出现成阶的色带。",
+    "method": "仅把镜内墙面低频亮度量化为离散台阶，保留人物、镜框和原亮暗分布。",
+    "source_guide": "总表第 67 行",
+    "duration_seconds": 8.0,
+    "fps": 24,
+    "frames": 192,
+    "videos": {
+      "control": "videos/r067_control.mp4",
+      "edited": "videos/r067_edited.mp4",
+      "comparison": "videos/r067_comparison.mp4",
+      "lossless_master": ""
+    },
+    "hashes": {
+      "control": "08b6b8e0805e07714303edf651db59c99d28cf25fef539e45dc16f526c4e681a",
+      "edited": "9782e3fc8e1a4a0c7da8ef3b5643384da344d4e91ca54359ac3ab11aa7e2b53f"
+    },
+    "evidence": [
+      "evidence/r067_frames.jpg",
+      "evidence/r067_closeup.jpg"
+    ],
+    "poster": [
+      "posters/r067.jpg"
+    ],
+    "start": 5.6,
+    "source_notes": {
+      "origin": "postproduced_calibration",
+      "window_seconds": [
+        6,
+        8
+      ],
+      "evidence_times_seconds": [
+        5.75,
+        6.8,
+        7.75
+      ]
+    }
+  },
+  {
+    "row": 69,
+    "label": "画面拉伸缩放—P1",
+    "dimension": "美感与画质",
+    "origin": "postproduced_calibration",
+    "guide": "看转盘和架格的宽高比。右侧同一个陶碗与人体会突然变宽、变窄。",
+    "method": "施加保持画幅边界的横向非等比映射，在不同时间段切换压扁与拉宽，音轨和帧序沿用原片。",
+    "source_guide": "总表第 69 行",
+    "duration_seconds": 8.0,
+    "fps": 24,
+    "frames": 192,
+    "videos": {
+      "control": "videos/r069_control.mp4",
+      "edited": "videos/r069_edited.mp4",
+      "comparison": "videos/r069_comparison.mp4",
+      "lossless_master": ""
+    },
+    "hashes": {
+      "control": "3301e6def8516016ca71365957907e65add4c64d278f7b85d330a7bced80d1df",
+      "edited": "82cb8ee8faa36b041ef34ead4483cc095dde125949da7650e6c7380c92109c9e"
+    },
+    "evidence": [
+      "evidence/r069_frames.jpg"
+    ],
+    "poster": [
+      "posters/r069.jpg"
+    ],
+    "start": 1.5,
+    "source_notes": {
+      "origin": "postproduced_calibration",
+      "window_seconds": [
+        1.75,
+        7.1
+      ],
+      "evidence_times_seconds": [
+        2.7,
+        4.5,
+        6.1
+      ]
+    }
+  },
+  {
+    "row": 74,
+    "label": "比例失调／透视异常—P1",
+    "dimension": "美感与画质",
+    "origin": "postproduced_calibration",
+    "guide": "站稳后看肩到胯与胯到脚的比例。右侧躯干变长、双腿变短，脚仍落在原来的地面位置。",
+    "method": "通过人物分割与局部纵向重采样固定头肩和脚底，把胯线下移，并补齐轮廓外露的少量背景。",
+    "source_guide": "总表第 74 行",
+    "duration_seconds": 8.0,
+    "fps": 24,
+    "frames": 192,
+    "videos": {
+      "control": "videos/r074_control.mp4",
+      "edited": "videos/r074_edited.mp4",
+      "comparison": "videos/r074_comparison.mp4",
+      "lossless_master": ""
+    },
+    "hashes": {
+      "control": "f451b0e86554eb33085a8a8e9086528583fda5c8ffacfcf3906bc2ef2b598f75",
+      "edited": "011efe5b656ff3bc18a91d3806416b0beb825e9b02bb519fe3f2e67912eaa169"
+    },
+    "evidence": [
+      "evidence/r074_frames.jpg",
+      "evidence/r074_closeup.jpg"
+    ],
+    "poster": [
+      "posters/r074.jpg"
+    ],
+    "start": 4.85,
+    "source_notes": {
+      "origin": "postproduced_calibration",
+      "window_seconds": [
+        5.1,
+        8
+      ],
+      "evidence_times_seconds": [
+        5.6,
+        6.65,
+        7.8
+      ]
+    }
+  },
+  {
+    "row": 75,
+    "label": "特效／后期包装粗糙—P1",
+    "dimension": "美感与画质",
+    "origin": "postproduced_calibration",
+    "guide": "第 3 秒光纹整片出现。右侧贴片不随装置透视转动，也覆盖了原本在它前面的手。",
+    "method": "将同色系能量图层固定到屏幕坐标，保留清晰的矩形边界和错误的遮挡顺序。",
+    "source_guide": "总表第 75 行",
+    "duration_seconds": 8.0,
+    "fps": 24,
+    "frames": 192,
+    "videos": {
+      "control": "videos/r075_control.mp4",
+      "edited": "videos/r075_edited.mp4",
+      "comparison": "videos/r075_comparison.mp4",
+      "lossless_master": ""
+    },
+    "hashes": {
+      "control": "77c187b4d0b68b84fea75d47e30af09d9bfb42e839ce8f1434e23a703195b0b0",
+      "edited": "50193853b2702f0dc3ef2850d350e2c64b1124735ceddd87573c8f885a3477c7"
+    },
+    "evidence": [
+      "evidence/r075_frames.jpg"
+    ],
+    "poster": [
+      "posters/r075.jpg"
+    ],
+    "start": 2.7,
+    "source_notes": {
+      "origin": "postproduced_calibration",
+      "window_seconds": [
+        3,
+        6.7
+      ],
+      "evidence_times_seconds": [
+        2.92,
+        3.6,
+        5.7
+      ]
+    }
+  },
+  {
+    "row": 77,
+    "label": "色彩饱和度异常—P1",
+    "dimension": "美感与画质",
+    "origin": "postproduced_calibration",
+    "guide": "看泳池水、绿植和暖色地砖。右侧多个色相同时接近荧光，曝光与镜头仍可对照。",
+    "method": "在 Lab 中对中高色度区域增强色度，保持固定亮度通道，灰白区域保留。",
+    "source_guide": "总表第 77 行",
+    "duration_seconds": 8.0,
+    "fps": 24,
+    "frames": 192,
+    "videos": {
+      "control": "videos/r077_control.mp4",
+      "edited": "videos/r077_edited.mp4",
+      "comparison": "videos/r077_comparison.mp4",
+      "lossless_master": ""
+    },
+    "hashes": {
+      "control": "78ca28277fc70ffe55e33dd5a12012ffed1f2e1361b6917464cc25a616bfa7f2",
+      "edited": "7a1dd81173814a639db5ffcbbc289ccca355dc17868c08f39c36ed711c791c8e"
+    },
+    "evidence": [
+      "evidence/r077_frames.jpg"
+    ],
+    "poster": [
+      "posters/r077.jpg"
+    ],
+    "start": 0.0,
+    "source_notes": {
+      "origin": "postproduced_calibration",
+      "window_seconds": [
+        0,
+        8
+      ],
+      "evidence_times_seconds": [
+        0.5,
+        3.6,
+        7.5
+      ]
+    }
+  },
+  {
+    "row": 79,
+    "label": "过度锐化—P0",
+    "dimension": "美感与画质",
+    "origin": "postproduced_calibration",
+    "guide": "看耳环、发际和手指边缘，右侧出现硬白晕与黑色描边。",
+    "method": "提高亮度边缘的高频过冲量并限制在边缘带，保留帧序、整体曝光和色彩。",
+    "source_guide": "总表第 79 行",
+    "duration_seconds": 8.0,
+    "fps": 24,
+    "frames": 192,
+    "videos": {
+      "control": "videos/r079_control.mp4",
+      "edited": "videos/r079_edited.mp4",
+      "comparison": "videos/r079_comparison.mp4",
+      "lossless_master": ""
+    },
+    "hashes": {
+      "control": "d5795783d2ae89f0d837933b1213f3c4d49258d98790a093033210061b097a2d",
+      "edited": "7c1c634a362a83f467eec80bfcdbf31d450a5b0cb3d96c32894bcd84b51dc9df"
+    },
+    "evidence": [
+      "evidence/r079_frames.jpg",
+      "evidence/r079_closeup.jpg"
+    ],
+    "poster": [
+      "posters/r079.jpg"
+    ],
+    "start": 0.0,
+    "source_notes": {
+      "origin": "postproduced_calibration",
+      "window_seconds": [
+        0,
+        8
+      ],
+      "evidence_times_seconds": [
+        2.9,
+        5.5,
+        7.5
+      ]
+    }
+  },
+  {
+    "row": 80,
+    "label": "人物纹理过少／磨皮感—P0",
+    "dimension": "美感与画质",
+    "origin": "postproduced_calibration",
+    "guide": "看颧骨和面颊。右侧毛孔和细纹被抹去，高光与眼、唇及发丝仍可对照。",
+    "method": "跟踪脸部肤色区，在轮廓之外做保边微纹理平滑，保持大尺度明暗和高光。",
+    "source_guide": "总表第 80 行",
+    "duration_seconds": 8.0,
+    "fps": 24,
+    "frames": 192,
+    "videos": {
+      "control": "videos/r080_control.mp4",
+      "edited": "videos/r080_edited.mp4",
+      "comparison": "videos/r080_comparison.mp4",
+      "lossless_master": ""
+    },
+    "hashes": {
+      "control": "4982e8b422a9afd8d00104e8b6cb11cb9144a247dc984f3f6443f4cc7931cc26",
+      "edited": "4585af899a34003ad00e4044d3e1a77fe55c8471f9edcb8a8c6fdbfd84b3fe7c"
+    },
+    "evidence": [
+      "evidence/r080_frames.jpg",
+      "evidence/r080_closeup.jpg"
+    ],
+    "poster": [
+      "posters/r080.jpg"
+    ],
+    "start": 1.0,
+    "source_notes": {
+      "origin": "postproduced_calibration",
+      "window_seconds": [
+        0,
+        8
+      ],
+      "evidence_times_seconds": [
+        3.2,
+        5.7,
+        7.5
+      ]
+    }
+  },
+  {
+    "row": 81,
+    "label": "光影融合差／贴图—P0",
+    "dimension": "美感与画质",
+    "origin": "postproduced_calibration",
+    "guide": "看猫的受光和地毯交界。右侧猫亮暗方向与房间不协调，接触影变浅，轮廓呈硬贴边。",
+    "method": "按猫实例分割，重新映射左右区域照度，减少足下接触阴影，并用窄轮廓制造贴合失败。",
+    "source_guide": "总表第 81 行",
+    "duration_seconds": 8.0,
+    "fps": 24,
+    "frames": 192,
+    "videos": {
+      "control": "videos/r081_control.mp4",
+      "edited": "videos/r081_edited.mp4",
+      "comparison": "videos/r081_comparison.mp4",
+      "lossless_master": ""
+    },
+    "hashes": {
+      "control": "1686fc886414a03a44e57ca484453a6ca84e6b16b1d415a9e0b2c082d087ef93",
+      "edited": "c88b23023ffef9f92c721ae20e5e8ffc68a2b3cf8543d46a298c2c81fc2467bd"
+    },
+    "evidence": [
+      "evidence/r081_frames.jpg",
+      "evidence/r081_closeup.jpg"
+    ],
+    "poster": [
+      "posters/r081.jpg"
+    ],
+    "start": 0.0,
+    "source_notes": {
+      "origin": "postproduced_calibration",
+      "window_seconds": [
+        0,
+        8
+      ],
+      "evidence_times_seconds": [
+        1,
+        3.6,
+        6
+      ]
+    }
+  },
+  {
+    "row": 82,
+    "label": "光影扁无立体感—P1",
+    "dimension": "美感与画质",
+    "origin": "postproduced_calibration",
+    "guide": "看鼻侧、脸颊和颈部。右侧大尺度的明暗塑形被压平，眼鼻边缘及原有纹理仍保留。",
+    "method": "跟踪人物脸与颈部，只压缩皮肤的低频亮度层，保留高频纹理和背景。",
+    "source_guide": "总表第 82 行",
+    "duration_seconds": 8.0,
+    "fps": 24,
+    "frames": 192,
+    "videos": {
+      "control": "videos/r082_control.mp4",
+      "edited": "videos/r082_edited.mp4",
+      "comparison": "videos/r082_comparison.mp4",
+      "lossless_master": ""
+    },
+    "hashes": {
+      "control": "f78b7546daaa17aad12f6de03a5900395f4e7c450a7c8c7aad76efcbe13124f5",
+      "edited": "72825c16bcdb4883472d584ad080886c85024dcc22e53a40dac4625704b6932a"
+    },
+    "evidence": [
+      "evidence/r082_frames.jpg",
+      "evidence/r082_closeup.jpg"
+    ],
+    "poster": [
+      "posters/r082.jpg"
+    ],
+    "start": 0.0,
+    "source_notes": {
+      "origin": "postproduced_calibration",
+      "window_seconds": [
+        0,
+        8
+      ],
+      "evidence_times_seconds": [
+        2.5,
+        4.55,
+        7.3
+      ]
+    }
+  },
+  {
+    "row": 84,
+    "label": "整体偏色—P0",
+    "dimension": "美感与画质",
+    "origin": "postproduced_calibration",
+    "guide": "看肤色、木材和深色西服，右侧共同偏灰、暗部抬高，整体层次变薄。",
+    "method": "对整片施加灰雾色调，抬黑位、压局部对比，并降低色度，保持原片构图和切点。",
+    "source_guide": "总表第 84 行",
+    "duration_seconds": 8.0,
+    "fps": 24,
+    "frames": 192,
+    "videos": {
+      "control": "videos/r084_control.mp4",
+      "edited": "videos/r084_edited.mp4",
+      "comparison": "videos/r084_comparison.mp4",
+      "lossless_master": ""
+    },
+    "hashes": {
+      "control": "b0f496fcfb9ee3ac99e0d0a051921a225613759dead86325087df6dd548c0b18",
+      "edited": "fdf689be1cd1ec156233d42bdfc0e1d0d8b7cdb8173a043032d626fcf567124b"
+    },
+    "evidence": [
+      "evidence/r084_frames.jpg"
+    ],
+    "poster": [
+      "posters/r084.jpg"
+    ],
+    "start": 0.0,
+    "source_notes": {
+      "origin": "postproduced_calibration",
+      "window_seconds": [
+        0,
+        8
+      ],
+      "evidence_times_seconds": [
+        0.5,
+        3,
+        6.5
+      ]
+    }
+  },
+  {
+    "row": 87,
+    "label": "生成异常内容—P0",
+    "dimension": "美感与画质",
+    "origin": "postproduced_calibration",
+    "guide": "右侧 7.50–8.50 秒只有错位、重复的图块，人物与能量球都无法辨认，第 205 帧恢复。",
+    "method": "将同一张画面上的局部块及近期图块打乱并替换整屏。",
+    "source_guide": "总表第 87 行",
+    "duration_seconds": 10.125,
+    "fps": 24,
+    "frames": 243,
+    "videos": {
+      "control": "videos/r087_control.mp4",
+      "edited": "videos/r087_edited.mp4",
+      "comparison": "videos/r087_comparison.mp4",
+      "lossless_master": ""
+    },
+    "hashes": {
+      "control": "290a4effa011a5b2465cd5cb69533f158f1954aa4a0f4b2d37b5f00d5346637d",
+      "edited": "062d6a741a5648f27f302feb5c5f469322f786412227fb4db3c952e97683c8d0"
+    },
+    "evidence": [
+      "evidence/r087_frames.jpg"
+    ],
+    "poster": [
+      "posters/r087.jpg"
+    ],
+    "start": 6.8,
+    "source_notes": {
+      "origin": "postproduced_calibration",
+      "source_model": "MiniMax-H3",
+      "replacement_window_seconds_half_open": [
+        7.5,
+        8.5
+      ]
+    }
+  },
+  {
+    "row": 95,
+    "label": "参考音色错配／混淆—P1",
+    "dimension": "多模态指令遵循",
+    "origin": "postproduced_calibration",
+    "guide": "试听1–3秒左侧A与4–6秒右侧B：对照为A高音区、B低音区；反例为两者互换。",
+    "method": "两名不同macOS中文TTS（Tingting=校准参考1、Meijia降音区=校准参考2）分别读同台词；控制A→1/B→2，反例A→2/B→1。视频流均从r095_good无重编码复制。",
+    "source_guide": "总表第 95 行",
+    "duration_seconds": 8.0,
+    "fps": 24,
+    "frames": 192,
+    "videos": {
+      "control": "videos/r095_control.mp4",
+      "edited": "videos/r095_edited.mp4",
+      "comparison": "",
+      "lossless_master": ""
+    },
+    "hashes": {
+      "control": "aa2e97a01bb425e907f202278ab1991057aa0c2ace1257f3cfc0bc3562d8f153",
+      "edited": "93f4ada4a0e6774c11c10a779f6872d7d39658fa4ee2171fd330e8cc235f6c35"
+    },
+    "evidence": [
+      "evidence/r095_frames.jpg"
+    ],
+    "poster": [
+      "posters/r095_control.jpg",
+      "posters/r095_edited.jpg"
+    ],
+    "start": 1.0,
+    "audio_references": [
+      "videos/r095_reference_1.m4a",
+      "videos/r095_reference_2.m4a"
+    ],
+    "listening_note": "TTS替代题库录音声纹，仅提供可试听且可互换的两位系统中文speaker；原画面口型未重绘，可能不完全吻合。",
+    "source_notes": {
+      "origin": "同源后期制作标注校准样片",
+      "编辑区间": [
+        [
+          1,
+          3
+        ],
+        [
+          4,
+          6
+        ]
+      ],
+      "参考匹配程度": "TTS替代题库录音声纹，仅提供可试听且可互换的两位系统中文speaker；原画面口型未重绘，可能不完全吻合。"
+    }
+  },
+  {
+    "row": 98,
+    "label": "人物肤色参考不像",
+    "dimension": "参考一致性",
+    "origin": "postproduced_calibration",
+    "guide": "看门边蓝衣者的脸和手，右侧只将这位演员肤色调深偏黄。中间沙发人物和白墙是对照锚点。",
+    "method": "仅处理进门者所在的镜头，分离脸部和手部肤色，以 Lab 改变亮度与黄色分量，其余像素沿用原帧。",
+    "source_guide": "总表第 98 行",
+    "duration_seconds": 10.125,
+    "fps": 24,
+    "frames": 243,
+    "videos": {
+      "control": "videos/r098_control.mp4",
+      "edited": "videos/r098_edited.mp4",
+      "comparison": "videos/r098_comparison.mp4",
+      "lossless_master": ""
+    },
+    "hashes": {
+      "control": "78f6907dc0823493d87c4c769877cceed3db5569263663e188ba636ff25dfa34",
+      "edited": "a7e17d01a4762c23c1aebb7d498b4fd2929715cfb2fd760e193de24ede09681f"
+    },
+    "evidence": [
+      "evidence/r098_frames.jpg",
+      "evidence/r098_closeup.jpg"
+    ],
+    "poster": [
+      "posters/r098.jpg"
+    ],
+    "start": 1.6,
+    "source_notes": {
+      "origin": "postproduced_calibration",
+      "window_seconds": [
+        1.5,
+        10.125
+      ],
+      "evidence_times_seconds": [
+        2,
+        5.35,
+        8.5
+      ]
+    }
+  },
+  {
+    "row": 99,
+    "label": "人物身材参考不像",
+    "dimension": "参考一致性",
+    "origin": "postproduced_calibration",
+    "guide": "看右侧角色相对椅背和桌面的比例。她全程更高、更宽，脚底仍落在地面。",
+    "method": "用手工多边形掩膜放大右侧二维角色约20%，锁定地面锚点和桌椅。",
+    "source_guide": "总表第 99 行",
+    "duration_seconds": 8.0,
+    "fps": 24,
+    "frames": 192,
+    "videos": {
+      "control": "videos/r099_control.mp4",
+      "edited": "videos/r099_edited.mp4",
+      "comparison": "videos/r099_comparison.mp4",
+      "lossless_master": ""
+    },
+    "hashes": {
+      "control": "83876706b9ec6d28be4cae2ce308ad0da4fc352fb06bb5bfeadae982c0b5c4a0",
+      "edited": "dcc887ea815cc4cfad1d9d68655fe2926c43015494988a40c0ec10f59fdfff72"
+    },
+    "evidence": [
+      "evidence/r099_frames.jpg",
+      "evidence/r099_closeup.jpg"
+    ],
+    "poster": [
+      "posters/r099.jpg"
+    ],
+    "start": 0.0,
+    "source_notes": {
+      "origin": "同源后期制作标注校准样片",
+      "编辑区间": [
+        0,
+        8
+      ]
+    }
+  },
+  {
+    "row": 100,
+    "label": "动作参考不像",
+    "dimension": "参考一致性",
+    "origin": "postproduced_calibration",
+    "guide": "看2–6秒唯一的手和棋子：对照走半圆，反例严格直线；两边同起点、终点和入碟位置。",
+    "method": "使用原视频参考提供的table/hand/token透明源层逐帧二维重渲；手始终单一，棋子固定贴手。仅路径函数不同。",
+    "source_guide": "总表第 100 行",
+    "duration_seconds": 8.0,
+    "fps": 24,
+    "frames": 192,
+    "videos": {
+      "control": "videos/r100_control.mp4",
+      "edited": "videos/r100_edited.mp4",
+      "comparison": "videos/r100_comparison.mp4",
+      "lossless_master": ""
+    },
+    "hashes": {
+      "control": "87561d140b1eef6a9baebdffb2dac73bcbe3e4216423f2e563fea4ebd8fb6cae",
+      "edited": "e402ab9d6694ab8dd0240465e63dd95bf3d41f52c6a01dd676ee7ee85aa8a784"
+    },
+    "evidence": [
+      "evidence/r100_frames.jpg"
+    ],
+    "poster": [
+      "posters/r100.jpg"
+    ],
+    "start": 2.0,
+    "source_notes": {
+      "origin": "基准分镜二维重渲标注校准样片",
+      "编辑区间": [
+        2,
+        6
+      ]
+    }
+  },
+  {
+    "row": 110,
+    "label": "光影／色彩／色调参考不像",
+    "dimension": "参考一致性",
+    "origin": "postproduced_calibration",
+    "guide": "用杯柄确认两边的杯子都朝右。对照杯身左亮、影子向右；反例右亮、影子向左。",
+    "method": "根据题库白瓷杯、木桌、灰墙的参考结构重建一个三维场景。两侧共用杯体、把手、木纹与推进轨迹，控制变量是主光方位。原 H3 正例音轨逐包复用。",
+    "source_guide": "总表第 110 行",
+    "duration_seconds": 8.0,
+    "fps": 24,
+    "frames": 192,
+    "videos": {
+      "control": "videos/r110_control.mp4",
+      "edited": "videos/r110_edited.mp4",
+      "comparison": "videos/r110_comparison.mp4",
+      "lossless_master": ""
+    },
+    "hashes": {
+      "control": "f724d97014f4b707506c0ee7e80ebe25c14509c2f26d5ba9df253a08d0bf2825",
+      "edited": "bd48994922bf00441dbca6c62549e77b9eb6233a84c4fa21b0e3609db2ebc162"
+    },
+    "evidence": [
+      "evidence/r110_frames.jpg"
+    ],
+    "poster": [
+      "posters/r110.jpg"
+    ],
+    "start": 0.3,
+    "source_notes": {
+      "origin": "same_scene_3d_rerender_calibration",
+      "window_seconds": [
+        0,
+        8
+      ]
+    }
+  }
+]
