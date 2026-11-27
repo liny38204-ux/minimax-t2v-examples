@@ -1,0 +1,554 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="浏览 MiniMax H3 直出的 120 条 T2VA 成片。">
+  <meta name="theme-color" content="#121710">
+  <title>MiniMax H3 · T2VA 120 题成片</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="gallery.css">
+  <script src="gallery.js" defer></script>
+</head>
+<body>
+  <main class="shell">
+    <header class="intro">
+      <p class="model">MINIMAX H3</p>
+      <h1>T2VA 120 题成片</h1>
+      <p class="summary">原始 Prompt 直出 · 24 fps · 带音轨</p>
+    </header>
+
+    <div class="workspace">
+      <section class="viewer" aria-label="视频播放器">
+        <div class="viewer-heading">
+          <div>
+            <p class="field-label">当前题目</p>
+            <h2 id="current-id">Q001</h2>
+          </div>
+          <div class="navigation" aria-label="相邻题目">
+            <button type="button" id="previous" aria-label="上一题" disabled>←</button>
+            <button type="button" id="next" aria-label="下一题">→</button>
+          </div>
+        </div>
+        <div class="screen" data-vertical="true">
+          <video id="player" src="videos/Q001.mp4" poster="posters/Q001.jpg"
+                 controls playsinline preload="metadata" aria-label="播放 Q001">
+            <a href="videos/Q001.mp4">打开 Q001 的 MP4</a>
+          </video>
+        </div>
+        <div class="viewer-foot">
+          <div class="metrics">
+            <p id="technical">9:16 · 512 × 896 · 15.11 秒</p>
+            <p id="duration-note" role="status" hidden></p>
+            <p id="player-error" role="status" hidden>播放器暂时无法读取视频，请尝试直接打开 MP4。</p>
+          </div>
+          <a id="download" class="download" href="videos/Q001.mp4" download="Q001.mp4">下载 MP4 <span aria-hidden="true">↓</span></a>
+        </div>
+      </section>
+
+      <section class="catalog" aria-labelledby="catalog-title">
+        <div class="catalog-title">
+          <h2 id="catalog-title">全部题目</h2>
+          <output id="result-count" aria-live="polite">120 条</output>
+        </div>
+        <div class="search">
+          <label for="query">搜索题号</label>
+          <input id="query" type="search" placeholder="如 Q053" autocomplete="off" spellcheck="false">
+        </div>
+        <div class="filters" aria-label="按画幅筛选">
+          <button type="button" data-ratio="all" aria-pressed="true">全部</button>
+          <button type="button" data-ratio="16:9" aria-pressed="false">16:9</button>
+          <button type="button" data-ratio="9:16" aria-pressed="false">9:16</button>
+          <button type="button" data-ratio="4:3" aria-pressed="false">4:3</button>
+        </div>
+        <div class="catalog-scroll" id="catalog-scroll">
+          <div class="tiles" id="tiles">
+            <a class="tile" data-case="Q001" href="videos/Q001.mp4" aria-current="true">
+              <img class="tile-image" src="posters/Q001.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q001</span><span class="tile-ratio">9:16</span></span>
+            </a>
+            <a class="tile" data-case="Q002" href="videos/Q002.mp4">
+              <img class="tile-image" src="posters/Q002.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q002</span><span class="tile-ratio">16:9</span></span>
+            </a>
+            <a class="tile" data-case="Q003" href="videos/Q003.mp4">
+              <img class="tile-image" src="posters/Q003.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q003</span><span class="tile-ratio">16:9</span></span>
+            </a>
+            <a class="tile" data-case="Q004" href="videos/Q004.mp4">
+              <img class="tile-image" src="posters/Q004.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q004</span><span class="tile-ratio">16:9</span></span>
+            </a>
+            <a class="tile" data-case="Q005" href="videos/Q005.mp4">
+              <img class="tile-image" src="posters/Q005.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q005</span><span class="tile-ratio">16:9</span></span>
+            </a>
+            <a class="tile" data-case="Q006" href="videos/Q006.mp4">
+              <img class="tile-image" src="posters/Q006.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q006</span><span class="tile-ratio">16:9</span></span>
+            </a>
+            <a class="tile" data-case="Q007" href="videos/Q007.mp4">
+              <img class="tile-image" src="posters/Q007.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q007</span><span class="tile-ratio">9:16</span></span>
+            </a>
+            <a class="tile" data-case="Q008" href="videos/Q008.mp4">
+              <img class="tile-image" src="posters/Q008.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q008</span><span class="tile-ratio">16:9</span></span>
+            </a>
+            <a class="tile" data-case="Q009" href="videos/Q009.mp4">
+              <img class="tile-image" src="posters/Q009.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q009</span><span class="tile-ratio">9:16</span></span>
+            </a>
+            <a class="tile" data-case="Q010" href="videos/Q010.mp4">
+              <img class="tile-image" src="posters/Q010.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q010</span><span class="tile-ratio">9:16</span></span>
+            </a>
+            <a class="tile" data-case="Q011" href="videos/Q011.mp4">
+              <img class="tile-image" src="posters/Q011.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q011</span><span class="tile-ratio">16:9</span></span>
+            </a>
+            <a class="tile" data-case="Q012" href="videos/Q012.mp4">
+              <img class="tile-image" src="posters/Q012.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q012</span><span class="tile-ratio">16:9</span></span>
+            </a>
+            <a class="tile" data-case="Q013" href="videos/Q013.mp4">
+              <img class="tile-image" src="posters/Q013.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q013</span><span class="tile-ratio">9:16</span></span>
+            </a>
+            <a class="tile" data-case="Q014" href="videos/Q014.mp4">
+              <img class="tile-image" src="posters/Q014.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q014</span><span class="tile-ratio">16:9</span></span>
+            </a>
+            <a class="tile" data-case="Q015" href="videos/Q015.mp4">
+              <img class="tile-image" src="posters/Q015.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q015</span><span class="tile-ratio">16:9</span></span>
+            </a>
+            <a class="tile" data-case="Q016" href="videos/Q016.mp4">
+              <img class="tile-image" src="posters/Q016.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q016</span><span class="tile-ratio">16:9</span></span>
+            </a>
+            <a class="tile" data-case="Q017" href="videos/Q017.mp4">
+              <img class="tile-image" src="posters/Q017.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q017</span><span class="tile-ratio">16:9</span></span>
+            </a>
+            <a class="tile" data-case="Q018" href="videos/Q018.mp4">
+              <img class="tile-image" src="posters/Q018.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q018</span><span class="tile-ratio">16:9</span></span>
+            </a>
+            <a class="tile" data-case="Q019" href="videos/Q019.mp4">
+              <img class="tile-image" src="posters/Q019.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q019</span><span class="tile-ratio">9:16</span></span>
+            </a>
+            <a class="tile" data-case="Q020" href="videos/Q020.mp4">
+              <img class="tile-image" src="posters/Q020.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q020</span><span class="tile-ratio">16:9</span></span>
+            </a>
+            <a class="tile" data-case="Q021" href="videos/Q021.mp4">
+              <img class="tile-image" src="posters/Q021.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q021</span><span class="tile-ratio">4:3</span></span>
+            </a>
+            <a class="tile" data-case="Q022" href="videos/Q022.mp4">
+              <img class="tile-image" src="posters/Q022.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q022</span><span class="tile-ratio">16:9</span></span>
+            </a>
+            <a class="tile" data-case="Q023" href="videos/Q023.mp4">
+              <img class="tile-image" src="posters/Q023.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q023</span><span class="tile-ratio">9:16</span></span>
+            </a>
+            <a class="tile" data-case="Q024" href="videos/Q024.mp4">
+              <img class="tile-image" src="posters/Q024.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q024</span><span class="tile-ratio">4:3</span></span>
+            </a>
+            <a class="tile" data-case="Q025" href="videos/Q025.mp4">
+              <img class="tile-image" src="posters/Q025.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q025</span><span class="tile-ratio">16:9</span></span>
+            </a>
+            <a class="tile" data-case="Q026" href="videos/Q026.mp4">
+              <img class="tile-image" src="posters/Q026.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q026</span><span class="tile-ratio">9:16</span></span>
+            </a>
+            <a class="tile" data-case="Q027" href="videos/Q027.mp4">
+              <img class="tile-image" src="posters/Q027.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q027</span><span class="tile-ratio">9:16</span></span>
+            </a>
+            <a class="tile" data-case="Q028" href="videos/Q028.mp4">
+              <img class="tile-image" src="posters/Q028.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q028</span><span class="tile-ratio">9:16</span></span>
+            </a>
+            <a class="tile" data-case="Q029" href="videos/Q029.mp4">
+              <img class="tile-image" src="posters/Q029.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q029</span><span class="tile-ratio">16:9</span></span>
+            </a>
+            <a class="tile" data-case="Q030" href="videos/Q030.mp4">
+              <img class="tile-image" src="posters/Q030.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q030</span><span class="tile-ratio">16:9</span></span>
+            </a>
+            <a class="tile" data-case="Q031" href="videos/Q031.mp4">
+              <img class="tile-image" src="posters/Q031.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q031</span><span class="tile-ratio">16:9</span></span>
+            </a>
+            <a class="tile" data-case="Q032" href="videos/Q032.mp4">
+              <img class="tile-image" src="posters/Q032.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q032</span><span class="tile-ratio">16:9</span></span>
+            </a>
+            <a class="tile" data-case="Q033" href="videos/Q033.mp4">
+              <img class="tile-image" src="posters/Q033.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q033</span><span class="tile-ratio">9:16</span></span>
+            </a>
+            <a class="tile" data-case="Q034" href="videos/Q034.mp4">
+              <img class="tile-image" src="posters/Q034.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q034</span><span class="tile-ratio">9:16</span></span>
+            </a>
+            <a class="tile" data-case="Q035" href="videos/Q035.mp4">
+              <img class="tile-image" src="posters/Q035.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q035</span><span class="tile-ratio">16:9</span></span>
+            </a>
+            <a class="tile" data-case="Q036" href="videos/Q036.mp4">
+              <img class="tile-image" src="posters/Q036.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q036</span><span class="tile-ratio">9:16</span></span>
+            </a>
+            <a class="tile" data-case="Q037" href="videos/Q037.mp4">
+              <img class="tile-image" src="posters/Q037.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q037</span><span class="tile-ratio">16:9</span></span>
+            </a>
+            <a class="tile" data-case="Q038" href="videos/Q038.mp4">
+              <img class="tile-image" src="posters/Q038.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q038</span><span class="tile-ratio">16:9</span></span>
+            </a>
+            <a class="tile" data-case="Q039" href="videos/Q039.mp4">
+              <img class="tile-image" src="posters/Q039.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q039</span><span class="tile-ratio">9:16</span></span>
+            </a>
+            <a class="tile" data-case="Q040" href="videos/Q040.mp4">
+              <img class="tile-image" src="posters/Q040.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q040</span><span class="tile-ratio">9:16</span></span>
+            </a>
+            <a class="tile" data-case="Q041" href="videos/Q041.mp4">
+              <img class="tile-image" src="posters/Q041.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q041</span><span class="tile-ratio">16:9</span></span>
+            </a>
+            <a class="tile" data-case="Q042" href="videos/Q042.mp4">
+              <img class="tile-image" src="posters/Q042.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q042</span><span class="tile-ratio">9:16</span></span>
+            </a>
+            <a class="tile" data-case="Q043" href="videos/Q043.mp4">
+              <img class="tile-image" src="posters/Q043.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q043</span><span class="tile-ratio">9:16</span></span>
+            </a>
+            <a class="tile" data-case="Q044" href="videos/Q044.mp4">
+              <img class="tile-image" src="posters/Q044.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q044</span><span class="tile-ratio">9:16</span></span>
+            </a>
+            <a class="tile" data-case="Q045" href="videos/Q045.mp4">
+              <img class="tile-image" src="posters/Q045.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q045</span><span class="tile-ratio">16:9</span></span>
+            </a>
+            <a class="tile" data-case="Q046" href="videos/Q046.mp4">
+              <img class="tile-image" src="posters/Q046.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q046</span><span class="tile-ratio">16:9</span></span>
+            </a>
+            <a class="tile" data-case="Q047" href="videos/Q047.mp4">
+              <img class="tile-image" src="posters/Q047.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q047</span><span class="tile-ratio">9:16</span></span>
+            </a>
+            <a class="tile" data-case="Q048" href="videos/Q048.mp4">
+              <img class="tile-image" src="posters/Q048.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q048</span><span class="tile-ratio">9:16</span></span>
+            </a>
+            <a class="tile" data-case="Q049" href="videos/Q049.mp4">
+              <img class="tile-image" src="posters/Q049.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q049</span><span class="tile-ratio">9:16</span></span>
+            </a>
+            <a class="tile" data-case="Q050" href="videos/Q050.mp4">
+              <img class="tile-image" src="posters/Q050.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q050</span><span class="tile-ratio">16:9</span></span>
+            </a>
+            <a class="tile" data-case="Q051" href="videos/Q051.mp4">
+              <img class="tile-image" src="posters/Q051.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q051</span><span class="tile-ratio">16:9</span></span>
+            </a>
+            <a class="tile" data-case="Q052" href="videos/Q052.mp4">
+              <img class="tile-image" src="posters/Q052.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q052</span><span class="tile-ratio">4:3</span></span>
+            </a>
+            <a class="tile" data-case="Q053" href="videos/Q053.mp4">
+              <img class="tile-image" src="posters/Q053.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q053</span><span class="tile-ratio">16:9</span></span>
+            </a>
+            <a class="tile" data-case="Q054" href="videos/Q054.mp4">
+              <img class="tile-image" src="posters/Q054.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q054</span><span class="tile-ratio">16:9</span></span>
+            </a>
+            <a class="tile" data-case="Q055" href="videos/Q055.mp4">
+              <img class="tile-image" src="posters/Q055.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q055</span><span class="tile-ratio">16:9</span></span>
+            </a>
+            <a class="tile" data-case="Q056" href="videos/Q056.mp4">
+              <img class="tile-image" src="posters/Q056.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q056</span><span class="tile-ratio">16:9</span></span>
+            </a>
+            <a class="tile" data-case="Q057" href="videos/Q057.mp4">
+              <img class="tile-image" src="posters/Q057.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q057</span><span class="tile-ratio">9:16</span></span>
+            </a>
+            <a class="tile" data-case="Q058" href="videos/Q058.mp4">
+              <img class="tile-image" src="posters/Q058.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q058</span><span class="tile-ratio">9:16</span></span>
+            </a>
+            <a class="tile" data-case="Q059" href="videos/Q059.mp4">
+              <img class="tile-image" src="posters/Q059.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q059</span><span class="tile-ratio">16:9</span></span>
+            </a>
+            <a class="tile" data-case="Q060" href="videos/Q060.mp4">
+              <img class="tile-image" src="posters/Q060.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q060</span><span class="tile-ratio">9:16</span></span>
+            </a>
+            <a class="tile" data-case="Q061" href="videos/Q061.mp4">
+              <img class="tile-image" src="posters/Q061.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q061</span><span class="tile-ratio">9:16</span></span>
+            </a>
+            <a class="tile" data-case="Q062" href="videos/Q062.mp4">
+              <img class="tile-image" src="posters/Q062.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q062</span><span class="tile-ratio">16:9</span></span>
+            </a>
+            <a class="tile" data-case="Q063" href="videos/Q063.mp4">
+              <img class="tile-image" src="posters/Q063.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q063</span><span class="tile-ratio">9:16</span></span>
+            </a>
+            <a class="tile" data-case="Q064" href="videos/Q064.mp4">
+              <img class="tile-image" src="posters/Q064.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q064</span><span class="tile-ratio">9:16</span></span>
+            </a>
+            <a class="tile" data-case="Q065" href="videos/Q065.mp4">
+              <img class="tile-image" src="posters/Q065.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q065</span><span class="tile-ratio">16:9</span></span>
+            </a>
+            <a class="tile" data-case="Q066" href="videos/Q066.mp4">
+              <img class="tile-image" src="posters/Q066.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q066</span><span class="tile-ratio">9:16</span></span>
+            </a>
+            <a class="tile" data-case="Q067" href="videos/Q067.mp4">
+              <img class="tile-image" src="posters/Q067.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q067</span><span class="tile-ratio">9:16</span></span>
+            </a>
+            <a class="tile" data-case="Q068" href="videos/Q068.mp4">
+              <img class="tile-image" src="posters/Q068.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q068</span><span class="tile-ratio">9:16</span></span>
+            </a>
+            <a class="tile" data-case="Q069" href="videos/Q069.mp4">
+              <img class="tile-image" src="posters/Q069.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q069</span><span class="tile-ratio">9:16</span></span>
+            </a>
+            <a class="tile" data-case="Q070" href="videos/Q070.mp4">
+              <img class="tile-image" src="posters/Q070.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q070</span><span class="tile-ratio">16:9</span></span>
+            </a>
+            <a class="tile" data-case="Q071" href="videos/Q071.mp4">
+              <img class="tile-image" src="posters/Q071.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q071</span><span class="tile-ratio">16:9</span></span>
+            </a>
+            <a class="tile" data-case="Q072" href="videos/Q072.mp4">
+              <img class="tile-image" src="posters/Q072.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q072</span><span class="tile-ratio">9:16</span></span>
+            </a>
+            <a class="tile" data-case="Q073" href="videos/Q073.mp4">
+              <img class="tile-image" src="posters/Q073.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q073</span><span class="tile-ratio">9:16</span></span>
+            </a>
+            <a class="tile" data-case="Q074" href="videos/Q074.mp4">
+              <img class="tile-image" src="posters/Q074.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q074</span><span class="tile-ratio">16:9</span></span>
+            </a>
+            <a class="tile" data-case="Q075" href="videos/Q075.mp4">
+              <img class="tile-image" src="posters/Q075.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q075</span><span class="tile-ratio">16:9</span></span>
+            </a>
+            <a class="tile" data-case="Q076" href="videos/Q076.mp4">
+              <img class="tile-image" src="posters/Q076.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q076</span><span class="tile-ratio">9:16</span></span>
+            </a>
+            <a class="tile" data-case="Q077" href="videos/Q077.mp4">
+              <img class="tile-image" src="posters/Q077.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q077</span><span class="tile-ratio">9:16</span></span>
+            </a>
+            <a class="tile" data-case="Q078" href="videos/Q078.mp4">
+              <img class="tile-image" src="posters/Q078.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q078</span><span class="tile-ratio">16:9</span></span>
+            </a>
+            <a class="tile" data-case="Q079" href="videos/Q079.mp4">
+              <img class="tile-image" src="posters/Q079.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q079</span><span class="tile-ratio">16:9</span></span>
+            </a>
+            <a class="tile" data-case="Q080" href="videos/Q080.mp4">
+              <img class="tile-image" src="posters/Q080.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q080</span><span class="tile-ratio">9:16</span></span>
+            </a>
+            <a class="tile" data-case="Q081" href="videos/Q081.mp4">
+              <img class="tile-image" src="posters/Q081.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q081</span><span class="tile-ratio">9:16</span></span>
+            </a>
+            <a class="tile" data-case="Q082" href="videos/Q082.mp4">
+              <img class="tile-image" src="posters/Q082.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q082</span><span class="tile-ratio">16:9</span></span>
+            </a>
+            <a class="tile" data-case="Q083" href="videos/Q083.mp4">
+              <img class="tile-image" src="posters/Q083.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q083</span><span class="tile-ratio">16:9</span></span>
+            </a>
+            <a class="tile" data-case="Q084" href="videos/Q084.mp4">
+              <img class="tile-image" src="posters/Q084.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q084</span><span class="tile-ratio">16:9</span></span>
+            </a>
+            <a class="tile" data-case="Q085" href="videos/Q085.mp4">
+              <img class="tile-image" src="posters/Q085.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q085</span><span class="tile-ratio">9:16</span></span>
+            </a>
+            <a class="tile" data-case="Q086" href="videos/Q086.mp4">
+              <img class="tile-image" src="posters/Q086.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q086</span><span class="tile-ratio">9:16</span></span>
+            </a>
+            <a class="tile" data-case="Q087" href="videos/Q087.mp4">
+              <img class="tile-image" src="posters/Q087.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q087</span><span class="tile-ratio">9:16</span></span>
+            </a>
+            <a class="tile" data-case="Q088" href="videos/Q088.mp4">
+              <img class="tile-image" src="posters/Q088.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q088</span><span class="tile-ratio">16:9</span></span>
+            </a>
+            <a class="tile" data-case="Q089" href="videos/Q089.mp4">
+              <img class="tile-image" src="posters/Q089.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q089</span><span class="tile-ratio">16:9</span></span>
+            </a>
+            <a class="tile" data-case="Q090" href="videos/Q090.mp4">
+              <img class="tile-image" src="posters/Q090.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q090</span><span class="tile-ratio">9:16</span></span>
+            </a>
+            <a class="tile" data-case="Q091" href="videos/Q091.mp4">
+              <img class="tile-image" src="posters/Q091.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q091</span><span class="tile-ratio">16:9</span></span>
+            </a>
+            <a class="tile" data-case="Q092" href="videos/Q092.mp4">
+              <img class="tile-image" src="posters/Q092.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q092</span><span class="tile-ratio">16:9</span></span>
+            </a>
+            <a class="tile" data-case="Q093" href="videos/Q093.mp4">
+              <img class="tile-image" src="posters/Q093.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q093</span><span class="tile-ratio">16:9</span></span>
+            </a>
+            <a class="tile" data-case="Q094" href="videos/Q094.mp4">
+              <img class="tile-image" src="posters/Q094.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q094</span><span class="tile-ratio">16:9</span></span>
+            </a>
+            <a class="tile" data-case="Q095" href="videos/Q095.mp4">
+              <img class="tile-image" src="posters/Q095.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q095</span><span class="tile-ratio">16:9</span></span>
+            </a>
+            <a class="tile" data-case="Q096" href="videos/Q096.mp4">
+              <img class="tile-image" src="posters/Q096.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q096</span><span class="tile-ratio">9:16</span></span>
+            </a>
+            <a class="tile" data-case="Q097" href="videos/Q097.mp4">
+              <img class="tile-image" src="posters/Q097.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q097</span><span class="tile-ratio">16:9</span></span>
+            </a>
+            <a class="tile" data-case="Q098" href="videos/Q098.mp4">
+              <img class="tile-image" src="posters/Q098.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q098</span><span class="tile-ratio">9:16</span></span>
+            </a>
+            <a class="tile" data-case="Q099" href="videos/Q099.mp4">
+              <img class="tile-image" src="posters/Q099.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q099</span><span class="tile-ratio">16:9</span></span>
+            </a>
+            <a class="tile" data-case="Q100" href="videos/Q100.mp4">
+              <img class="tile-image" src="posters/Q100.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q100</span><span class="tile-ratio">16:9</span></span>
+            </a>
+            <a class="tile" data-case="Q101" href="videos/Q101.mp4">
+              <img class="tile-image" src="posters/Q101.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q101</span><span class="tile-ratio">9:16</span></span>
+            </a>
+            <a class="tile" data-case="Q102" href="videos/Q102.mp4">
+              <img class="tile-image" src="posters/Q102.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q102</span><span class="tile-ratio">16:9</span></span>
+            </a>
+            <a class="tile" data-case="Q103" href="videos/Q103.mp4">
+              <img class="tile-image" src="posters/Q103.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q103</span><span class="tile-ratio">16:9</span></span>
+            </a>
+            <a class="tile" data-case="Q104" href="videos/Q104.mp4">
+              <img class="tile-image" src="posters/Q104.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q104</span><span class="tile-ratio">16:9</span></span>
+            </a>
+            <a class="tile" data-case="Q105" href="videos/Q105.mp4">
+              <img class="tile-image" src="posters/Q105.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q105</span><span class="tile-ratio">9:16</span></span>
+            </a>
+            <a class="tile" data-case="Q106" href="videos/Q106.mp4">
+              <img class="tile-image" src="posters/Q106.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q106</span><span class="tile-ratio">9:16</span></span>
+            </a>
+            <a class="tile" data-case="Q107" href="videos/Q107.mp4">
+              <img class="tile-image" src="posters/Q107.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q107</span><span class="tile-ratio">16:9</span></span>
+            </a>
+            <a class="tile" data-case="Q108" href="videos/Q108.mp4">
+              <img class="tile-image" src="posters/Q108.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q108</span><span class="tile-ratio">9:16</span></span>
+            </a>
+            <a class="tile" data-case="Q109" href="videos/Q109.mp4">
+              <img class="tile-image" src="posters/Q109.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q109</span><span class="tile-ratio">16:9</span></span>
+            </a>
+            <a class="tile" data-case="Q110" href="videos/Q110.mp4">
+              <img class="tile-image" src="posters/Q110.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q110</span><span class="tile-ratio">16:9</span></span>
+            </a>
+            <a class="tile" data-case="Q111" href="videos/Q111.mp4">
+              <img class="tile-image" src="posters/Q111.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q111</span><span class="tile-ratio">16:9</span></span>
+            </a>
+            <a class="tile" data-case="Q112" href="videos/Q112.mp4">
+              <img class="tile-image" src="posters/Q112.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q112</span><span class="tile-ratio">9:16</span></span>
+            </a>
+            <a class="tile" data-case="Q113" href="videos/Q113.mp4">
+              <img class="tile-image" src="posters/Q113.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q113</span><span class="tile-ratio">16:9</span></span>
+            </a>
+            <a class="tile" data-case="Q114" href="videos/Q114.mp4">
+              <img class="tile-image" src="posters/Q114.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q114</span><span class="tile-ratio">16:9</span></span>
+            </a>
+            <a class="tile" data-case="Q115" href="videos/Q115.mp4">
+              <img class="tile-image" src="posters/Q115.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q115</span><span class="tile-ratio">16:9</span></span>
+            </a>
+            <a class="tile" data-case="Q116" href="videos/Q116.mp4">
+              <img class="tile-image" src="posters/Q116.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q116</span><span class="tile-ratio">16:9</span></span>
+            </a>
+            <a class="tile" data-case="Q117" href="videos/Q117.mp4">
+              <img class="tile-image" src="posters/Q117.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q117</span><span class="tile-ratio">16:9</span></span>
+            </a>
+            <a class="tile" data-case="Q118" href="videos/Q118.mp4">
+              <img class="tile-image" src="posters/Q118.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q118</span><span class="tile-ratio">16:9</span></span>
+            </a>
+            <a class="tile" data-case="Q119" href="videos/Q119.mp4">
+              <img class="tile-image" src="posters/Q119.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q119</span><span class="tile-ratio">9:16</span></span>
+            </a>
+            <a class="tile" data-case="Q120" href="videos/Q120.mp4">
+              <img class="tile-image" src="posters/Q120.jpg" alt="" loading="lazy" decoding="async">
+              <span class="tile-text"><span class="tile-id">Q120</span><span class="tile-ratio">9:16</span></span>
+            </a>
+          </div>
+          <p id="no-results" class="no-results" hidden>没有匹配的题目。</p>
+        </div>
+      </section>
+    </div>
+  </main>
+  <script type="application/json" id="catalog-data">[{"id":"Q001","ratio":"9:16","width":512,"height":896,"duration":15.107,"originalSeconds":15,"submittedSeconds":15},{"id":"Q002","ratio":"16:9","width":896,"height":512,"duration":15.107,"originalSeconds":15,"submittedSeconds":15},{"id":"Q003","ratio":"16:9","width":896,"height":512,"duration":15.107,"originalSeconds":15,"submittedSeconds":15},{"id":"Q004","ratio":"16:9","width":896,"height":512,"duration":15.107,"originalSeconds":15,"submittedSeconds":15},{"id":"Q005","ratio":"16:9","width":896,"height":512,"duration":15.107,"originalSeconds":15,"submittedSeconds":15},{"id":"Q006","ratio":"16:9","width":896,"height":512,"duration":15.107,"originalSeconds":15,"submittedSeconds":15},{"id":"Q007","ratio":"9:16","width":512,"height":896,"duration":15.107,"originalSeconds":15,"submittedSeconds":15},{"id":"Q008","ratio":"16:9","width":896,"height":512,"duration":15.107,"originalSeconds":15,"submittedSeconds":15},{"id":"Q009","ratio":"9:16","width":512,"height":896,"duration":15.107,"originalSeconds":15,"submittedSeconds":15},{"id":"Q010","ratio":"9:16","width":512,"height":896,"duration":15.107,"originalSeconds":15,"submittedSeconds":15},{"id":"Q011","ratio":"16:9","width":896,"height":512,"duration":15.107,"originalSeconds":15,"submittedSeconds":15},{"id":"Q012","ratio":"16:9","width":896,"height":512,"duration":15.107,"originalSeconds":15,"submittedSeconds":15},{"id":"Q013","ratio":"9:16","width":512,"height":896,"duration":15.107,"originalSeconds":15,"submittedSeconds":15},{"id":"Q014","ratio":"16:9","width":896,"height":512,"duration":15.107,"originalSeconds":15,"submittedSeconds":15},{"id":"Q015","ratio":"16:9","width":896,"height":512,"duration":15.107,"originalSeconds":15,"submittedSeconds":15},{"id":"Q016","ratio":"16:9","width":896,"height":512,"duration":15.107,"originalSeconds":15,"submittedSeconds":15},{"id":"Q017","ratio":"16:9","width":896,"height":512,"duration":15.107,"originalSeconds":15,"submittedSeconds":15},{"id":"Q018","ratio":"16:9","width":896,"height":512,"duration":15.107,"originalSeconds":15,"submittedSeconds":15},{"id":"Q019","ratio":"9:16","width":512,"height":896,"duration":15.107,"originalSeconds":15,"submittedSeconds":15},{"id":"Q020","ratio":"16:9","width":896,"height":512,"duration":15.107,"originalSeconds":15,"submittedSeconds":15},{"id":"Q021","ratio":"4:3","width":672,"height":512,"duration":15.107,"originalSeconds":15,"submittedSeconds":15},{"id":"Q022","ratio":"16:9","width":896,"height":512,"duration":15.107,"originalSeconds":15,"submittedSeconds":15},{"id":"Q023","ratio":"9:16","width":512,"height":896,"duration":15.107,"originalSeconds":15,"submittedSeconds":15},{"id":"Q024","ratio":"4:3","width":672,"height":512,"duration":15.107,"originalSeconds":15,"submittedSeconds":15},{"id":"Q025","ratio":"16:9","width":896,"height":512,"duration":15.107,"originalSeconds":15,"submittedSeconds":15},{"id":"Q026","ratio":"9:16","width":512,"height":896,"duration":15.107,"originalSeconds":15,"submittedSeconds":15},{"id":"Q027","ratio":"9:16","width":512,"height":896,"duration":15.107,"originalSeconds":15,"submittedSeconds":15},{"id":"Q028","ratio":"9:16","width":512,"height":896,"duration":15.107,"originalSeconds":15,"submittedSeconds":15},{"id":"Q029","ratio":"16:9","width":896,"height":512,"duration":15.107,"originalSeconds":15,"submittedSeconds":15},{"id":"Q030","ratio":"16:9","width":896,"height":512,"duration":15.107,"originalSeconds":15,"submittedSeconds":15},{"id":"Q031","ratio":"16:9","width":896,"height":512,"duration":15.107,"originalSeconds":15,"submittedSeconds":15},{"id":"Q032","ratio":"16:9","width":896,"height":512,"duration":15.107,"originalSeconds":15,"submittedSeconds":15},{"id":"Q033","ratio":"9:16","width":512,"height":896,"duration":15.107,"originalSeconds":15,"submittedSeconds":15},{"id":"Q034","ratio":"9:16","width":512,"height":896,"duration":15.107,"originalSeconds":15,"submittedSeconds":15},{"id":"Q035","ratio":"16:9","width":896,"height":512,"duration":15.107,"originalSeconds":15,"submittedSeconds":15},{"id":"Q036","ratio":"9:16","width":512,"height":896,"duration":15.107,"originalSeconds":15,"submittedSeconds":15},{"id":"Q037","ratio":"16:9","width":896,"height":512,"duration":15.107,"originalSeconds":15,"submittedSeconds":15},{"id":"Q038","ratio":"16:9","width":896,"height":512,"duration":15.107,"originalSeconds":15,"submittedSeconds":15},{"id":"Q039","ratio":"9:16","width":512,"height":896,"duration":15.107,"originalSeconds":15,"submittedSeconds":15},{"id":"Q040","ratio":"9:16","width":512,"height":896,"duration":15.107,"originalSeconds":15,"submittedSeconds":15},{"id":"Q041","ratio":"16:9","width":896,"height":512,"duration":15.107,"originalSeconds":15,"submittedSeconds":15},{"id":"Q042","ratio":"9:16","width":512,"height":896,"duration":15.107,"originalSeconds":15,"submittedSeconds":15},{"id":"Q043","ratio":"9:16","width":512,"height":896,"duration":15.107,"originalSeconds":15,"submittedSeconds":15},{"id":"Q044","ratio":"9:16","width":512,"height":896,"duration":15.107,"originalSeconds":15,"submittedSeconds":15},{"id":"Q045","ratio":"16:9","width":896,"height":512,"duration":15.107,"originalSeconds":15,"submittedSeconds":15},{"id":"Q046","ratio":"16:9","width":896,"height":512,"duration":15.107,"originalSeconds":15,"submittedSeconds":15},{"id":"Q047","ratio":"9:16","width":512,"height":896,"duration":15.107,"originalSeconds":15,"submittedSeconds":15},{"id":"Q048","ratio":"9:16","width":512,"height":896,"duration":15.107,"originalSeconds":15,"submittedSeconds":15},{"id":"Q049","ratio":"9:16","width":512,"height":896,"duration":15.107,"originalSeconds":15,"submittedSeconds":15},{"id":"Q050","ratio":"16:9","width":896,"height":512,"duration":15.107,"originalSeconds":15,"submittedSeconds":15},{"id":"Q051","ratio":"16:9","width":896,"height":512,"duration":15.107,"originalSeconds":15,"submittedSeconds":15},{"id":"Q052","ratio":"4:3","width":672,"height":512,"duration":15.107,"originalSeconds":15,"submittedSeconds":15},{"id":"Q053","ratio":"16:9","width":896,"height":512,"duration":15.107,"originalSeconds":16,"submittedSeconds":15},{"id":"Q054","ratio":"16:9","width":896,"height":512,"duration":15.107,"originalSeconds":15,"submittedSeconds":15},{"id":"Q055","ratio":"16:9","width":896,"height":512,"duration":15.107,"originalSeconds":15,"submittedSeconds":15},{"id":"Q056","ratio":"16:9","width":896,"height":512,"duration":15.107,"originalSeconds":15,"submittedSeconds":15},{"id":"Q057","ratio":"9:16","width":512,"height":896,"duration":15.107,"originalSeconds":15,"submittedSeconds":15},{"id":"Q058","ratio":"9:16","width":512,"height":896,"duration":14.407,"originalSeconds":14,"submittedSeconds":14},{"id":"Q059","ratio":"16:9","width":896,"height":512,"duration":15.107,"originalSeconds":15,"submittedSeconds":15},{"id":"Q060","ratio":"9:16","width":512,"height":896,"duration":15.107,"originalSeconds":15,"submittedSeconds":15},{"id":"Q061","ratio":"9:16","width":512,"height":896,"duration":15.107,"originalSeconds":15,"submittedSeconds":15},{"id":"Q062","ratio":"16:9","width":896,"height":512,"duration":15.107,"originalSeconds":15,"submittedSeconds":15},{"id":"Q063","ratio":"9:16","width":512,"height":896,"duration":15.107,"originalSeconds":15,"submittedSeconds":15},{"id":"Q064","ratio":"9:16","width":512,"height":896,"duration":15.107,"originalSeconds":15,"submittedSeconds":15},{"id":"Q065","ratio":"16:9","width":896,"height":512,"duration":15.107,"originalSeconds":15,"submittedSeconds":15},{"id":"Q066","ratio":"9:16","width":512,"height":896,"duration":10.157,"originalSeconds":10,"submittedSeconds":10},{"id":"Q067","ratio":"9:16","width":512,"height":896,"duration":15.107,"originalSeconds":15,"submittedSeconds":15},{"id":"Q068","ratio":"9:16","width":512,"height":896,"duration":15.107,"originalSeconds":15,"submittedSeconds":15},{"id":"Q069","ratio":"9:16","width":512,"height":896,"duration":15.107,"originalSeconds":15,"submittedSeconds":15},{"id":"Q070","ratio":"16:9","width":896,"height":512,"duration":15.107,"originalSeconds":15,"submittedSeconds":15},{"id":"Q071","ratio":"16:9","width":896,"height":512,"duration":15.107,"originalSeconds":15,"submittedSeconds":15},{"id":"Q072","ratio":"9:16","width":512,"height":896,"duration":15.107,"originalSeconds":15,"submittedSeconds":15},{"id":"Q073","ratio":"9:16","width":512,"height":896,"duration":15.107,"originalSeconds":15,"submittedSeconds":15},{"id":"Q074","ratio":"16:9","width":896,"height":512,"duration":10.157,"originalSeconds":10,"submittedSeconds":10},{"id":"Q075","ratio":"16:9","width":896,"height":512,"duration":15.107,"originalSeconds":15,"submittedSeconds":15},{"id":"Q076","ratio":"9:16","width":512,"height":896,"duration":15.107,"originalSeconds":15,"submittedSeconds":15},{"id":"Q077","ratio":"9:16","width":512,"height":896,"duration":15.107,"originalSeconds":15,"submittedSeconds":15},{"id":"Q078","ratio":"16:9","width":896,"height":512,"duration":15.107,"originalSeconds":15,"submittedSeconds":15},{"id":"Q079","ratio":"16:9","width":896,"height":512,"duration":12.282,"originalSeconds":12,"submittedSeconds":12},{"id":"Q080","ratio":"9:16","width":512,"height":896,"duration":13.707,"originalSeconds":13,"submittedSeconds":13},{"id":"Q081","ratio":"9:16","width":512,"height":896,"duration":15.107,"originalSeconds":15,"submittedSeconds":15},{"id":"Q082","ratio":"16:9","width":896,"height":512,"duration":13.707,"originalSeconds":13,"submittedSeconds":13},{"id":"Q083","ratio":"16:9","width":896,"height":512,"duration":15.107,"originalSeconds":15,"submittedSeconds":15},{"id":"Q084","ratio":"16:9","width":896,"height":512,"duration":15.107,"originalSeconds":16,"submittedSeconds":15},{"id":"Q085","ratio":"9:16","width":512,"height":896,"duration":15.107,"originalSeconds":16,"submittedSeconds":15},{"id":"Q086","ratio":"9:16","width":512,"height":896,"duration":15.107,"originalSeconds":16,"submittedSeconds":15},{"id":"Q087","ratio":"9:16","width":512,"height":896,"duration":15.107,"originalSeconds":16,"submittedSeconds":15},{"id":"Q088","ratio":"16:9","width":896,"height":512,"duration":15.107,"originalSeconds":15,"submittedSeconds":15},{"id":"Q089","ratio":"16:9","width":896,"height":512,"duration":15.107,"originalSeconds":15,"submittedSeconds":15},{"id":"Q090","ratio":"9:16","width":512,"height":896,"duration":15.107,"originalSeconds":15,"submittedSeconds":15},{"id":"Q091","ratio":"16:9","width":896,"height":512,"duration":15.107,"originalSeconds":15,"submittedSeconds":15},{"id":"Q092","ratio":"16:9","width":896,"height":512,"duration":15.107,"originalSeconds":15,"submittedSeconds":15},{"id":"Q093","ratio":"16:9","width":896,"height":512,"duration":15.107,"originalSeconds":15,"submittedSeconds":15},{"id":"Q094","ratio":"16:9","width":896,"height":512,"duration":15.107,"originalSeconds":15,"submittedSeconds":15},{"id":"Q095","ratio":"16:9","width":896,"height":512,"duration":15.107,"originalSeconds":15,"submittedSeconds":15},{"id":"Q096","ratio":"9:16","width":512,"height":896,"duration":15.107,"originalSeconds":15,"submittedSeconds":15},{"id":"Q097","ratio":"16:9","width":896,"height":512,"duration":15.107,"originalSeconds":15,"submittedSeconds":15},{"id":"Q098","ratio":"9:16","width":512,"height":896,"duration":15.107,"originalSeconds":16,"submittedSeconds":15},{"id":"Q099","ratio":"16:9","width":896,"height":512,"duration":15.107,"originalSeconds":15,"submittedSeconds":15},{"id":"Q100","ratio":"16:9","width":896,"height":512,"duration":15.107,"originalSeconds":15,"submittedSeconds":15},{"id":"Q101","ratio":"9:16","width":512,"height":896,"duration":15.107,"originalSeconds":15,"submittedSeconds":15},{"id":"Q102","ratio":"16:9","width":896,"height":512,"duration":15.107,"originalSeconds":15,"submittedSeconds":15},{"id":"Q103","ratio":"16:9","width":896,"height":512,"duration":15.107,"originalSeconds":15,"submittedSeconds":15},{"id":"Q104","ratio":"16:9","width":896,"height":512,"duration":15.107,"originalSeconds":15,"submittedSeconds":15},{"id":"Q105","ratio":"9:16","width":512,"height":896,"duration":15.107,"originalSeconds":15,"submittedSeconds":15},{"id":"Q106","ratio":"9:16","width":512,"height":896,"duration":15.107,"originalSeconds":16,"submittedSeconds":15},{"id":"Q107","ratio":"16:9","width":896,"height":512,"duration":15.107,"originalSeconds":16,"submittedSeconds":15},{"id":"Q108","ratio":"9:16","width":512,"height":896,"duration":15.107,"originalSeconds":15,"submittedSeconds":15},{"id":"Q109","ratio":"16:9","width":896,"height":512,"duration":15.107,"originalSeconds":16,"submittedSeconds":15},{"id":"Q110","ratio":"16:9","width":896,"height":512,"duration":15.107,"originalSeconds":15,"submittedSeconds":15},{"id":"Q111","ratio":"16:9","width":896,"height":512,"duration":15.107,"originalSeconds":15,"submittedSeconds":15},{"id":"Q112","ratio":"9:16","width":512,"height":896,"duration":15.107,"originalSeconds":15,"submittedSeconds":15},{"id":"Q113","ratio":"16:9","width":896,"height":512,"duration":15.107,"originalSeconds":15,"submittedSeconds":15},{"id":"Q114","ratio":"16:9","width":896,"height":512,"duration":15.107,"originalSeconds":15,"submittedSeconds":15},{"id":"Q115","ratio":"16:9","width":896,"height":512,"duration":15.107,"originalSeconds":15,"submittedSeconds":15},{"id":"Q116","ratio":"16:9","width":896,"height":512,"duration":15.107,"originalSeconds":15,"submittedSeconds":15},{"id":"Q117","ratio":"16:9","width":896,"height":512,"duration":15.107,"originalSeconds":15,"submittedSeconds":15},{"id":"Q118","ratio":"16:9","width":896,"height":512,"duration":15.107,"originalSeconds":16,"submittedSeconds":15},{"id":"Q119","ratio":"9:16","width":512,"height":896,"duration":15.107,"originalSeconds":16,"submittedSeconds":15},{"id":"Q120","ratio":"9:16","width":512,"height":896,"duration":15.107,"originalSeconds":15,"submittedSeconds":15}]</script>
+</body>
+</html>
